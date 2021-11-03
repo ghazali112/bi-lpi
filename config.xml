@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.backstage.biProject" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.bi.lpi20" ios-CFBundleVersion="2.7.1" version="2.7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Laporan Perekonomian Indonesia</name>
     <description>
-        Applikasi laporan tahunan BI
+        Aplikasi Laporan Perekonomian Indonesia oleh Bank Indonesia
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="naya.creative.studio@gmail.com" href="https://www.naya-studio.com">
+        Naya Studio
     </author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="portrait" />
+    <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
     <preference name="BackgroundColor" value="0x01669B" />
@@ -38,6 +38,8 @@
     <preference name="StatusBarStyle" value="blacktranslucent" />
     <preference name="KeyboardResize" value="true" />
     <preference name="KeyboardResizeMode" value="body" />
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="WKWebViewOnly" value="true" />
     <access origin="*" />
     <access origin="*://*.www.bi.go.id/*" subdomains="true" />
     <allow-intent href="http://*/*" />
@@ -49,11 +51,67 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <icon density="ldpi" src="res/icon/android/Icon-36-ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/Icon-48-mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/Icon-72-hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/Icon-96-xhdpi.png" />
+        <icon density="xxhdpi" src="res/icon/android/Icon-144-xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/icon/android/Icon-192-xxxhdpi.png" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-HDPI.png" density="land-hdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-LDPI.png" density="land-ldpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-MDPI.png" density="land-mdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-XHDPI.png" density="land-xhdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-HDPI.png" density="port-hdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-LDPI.png" density="port-ldpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-MDPI.png" density="port-mdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-XHDPI.png" density="port-xhdpi"/>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <icon height="180" src="res/icon/ios/Icon-180.png" width="180" />
+        <icon height="60" src="res/icon/ios/Icon-60.png" width="60" />
+        <icon height="120" src="res/icon/ios/Icon-120.png" width="120" />
+        <icon height="76" src="res/icon/ios/Icon-76.png" width="76" />
+        <icon height="152" src="res/icon/ios/Icon-152.png" width="152" />
+        <icon height="40" src="res/icon/ios/Icon-40.png" width="40" />
+        <icon height="80" src="res/icon/ios/Icon-80.png" width="80" />
+        <icon height="57" src="res/icon/ios/Icon-57.png" width="57" />
+        <icon height="114" src="res/icon/ios/Icon-114.png" width="114" />
+        <icon height="72" src="res/icon/ios/Icon-72.png" width="72" />
+        <icon height="144" src="res/icon/ios/Icon-144.png" width="144" />
+        <icon height="29" src="res/icon/ios/Icon-29.png" width="29" />
+        <icon height="58" src="res/icon/ios/Icon-58.png" width="58" />
+        <icon height="50" src="res/icon/ios/Icon-50.png" width="50" />
+        <icon height="100" src="res/icon/ios/Icon-100.png" width="100" />
+        <icon height="48" src="res/icon/ios/Icon-48.png" width="48" />
+        <icon height="55" src="res/icon/ios/Icon-55.png" width="55" />
+        <icon height="108" src="res/icon/ios/Icon-108.png" width="108" />
+        <icon height="172" src="res/icon/ios/Icon-172.png" width="172" />
+        <icon height="196" src="res/icon/ios/Icon-196.png" width="196" />
+        <icon height="20" src="res/icon/ios/Icon-20.png" width="20" />
+        <icon height="29" src="res/icon/ios/Icon-29.png" width="29" />
+        <icon height="58" src="res/icon/ios/Icon-58.png" width="58" />
+        <icon height="87" src="res/icon/ios/Icon-87.png" width="87" />
+        <icon height="88" src="res/icon/ios/Icon-88.png" width="88" />
+        <icon height="167" src="res/icon/ios/Icon-167.png" width="167" />
+        <icon height="1024" src="res/icon/ios/Icon-1024.png" width="1024" />
+        <splash height="480" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-320-480.png" width="320" />
+        <splash height="960" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-640-960.png" width="640" />
+        <splash height="1024" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-768-1024.png" width="768" />
+        <splash height="2048" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1536-2048.png" width="1536" />
+        <splash height="1136" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-640-1136.png" width="640" />
+        <splash height="1334" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-750-1334.png" width="750" />
+        <splash height="2208" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1242-2208.png" width="1242" />
+        <splash height="2436" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1125-2436.png" width="1125" />
+        <splash height="768" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-1024-768.png" width="1024" />
+        <splash height="1536" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-2048-1536.png" width="2048" />
+        <splash height="1242" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-2208-1242.png" width="2208" />
+        <splash height="1125" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-2436-1125.png" width="2436" />
     </platform>
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-document-viewer" spec="^0.9.10" />
@@ -61,6 +119,5 @@
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" />
-    <engine name="android" spec="^7.1.4" />
-    <engine name="ios" spec="^4.5.5" />
+    <engine name="ios" spec="^5.1.1" />
 </widget>

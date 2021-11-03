@@ -109,9 +109,10 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-#loginApp {
+#loginApp,
+#mainPage {
     color: #FFFFFF;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .mainBtn {
@@ -162,7 +163,7 @@ h1 {
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
     color:#6F6F6F;
     text-shadow:none;
-    background-image: url(../img/loginBg.png);
+    background-image: url(../img/loginBatikBlue.png);
     background-size: cover;
 }
 
@@ -193,10 +194,11 @@ h1 {
     padding-top: 50px;
 }
 
+/* header at year's page */
 #header {
     color: #FFFFFF;
     text-shadow: none;
-    background-image: url(../img/loginBg.png);
+    background-image: url(../img/loginBatikBlue.png);
     background-size: cover;
     border-bottom: 3px solid #BF9B6F;
     border-top:none;
@@ -512,10 +514,11 @@ ul li {
     width: 65px;
 }
 
+/* header pdf */
 #pdfHeaderOverlay {
     padding: 10px;
     color: #FFFFFF;
-    background-image: url(../img/loginBg.png);
+    background-image: url(../img/loginBatikBlue.png);
     background-size: cover;
     border-bottom: 3px solid #BF9B6F;
     border-top:none;
@@ -616,9 +619,13 @@ ul li {
     font-size: 2em;
 }
 
-#mainGub {
+#mainGubImg {
     width: 70%;
     float: right;
+}
+
+#prakataId {
+    text-align: left;
 }
 
 .smallBtn {
@@ -883,4 +890,13 @@ ul li {
 
 #pdfContainer.keyboard {
     position: absolute;
+}
+
+#langChange {
+    padding: 10px;
+    width: 55px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
 }

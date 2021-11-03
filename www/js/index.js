@@ -44,6 +44,16 @@ var app = {
             defaultPdfUrl="js/pdfJs/web/viewer.html?file=../../../pdf/";
         }
         console.log(defaultPdfUrl);
+
+        if(window.localStorage.getItem("LANG_ID") != undefined || window.localStorage.getItem("LANG_ID") != null) {
+            LANG = window.localStorage.getItem("LANG_ID");
+            console.log(LANG);
+        } else {
+            window.localStorage.setItem("LANG_ID",LANG);
+        }
+        setTimeout(function(){
+            $.mobile.changePage("mainPage.html");
+        },300);
     }
 };
 
@@ -52,20 +62,32 @@ app.initialize();
 $(document).ready(function (event) {
     //getPdfData();
 
-    if(device.platform == "iOS") {
-        $(document).on("focus","#globalOvrly",function(e){
-            e.preventDefault(); 
-            e.stopPropagation();
+    // if(device.platform == "iOS") {
+    //     $(document).on("focus","#globalOvrly",function(e){
+    //         e.preventDefault(); 
+    //         e.stopPropagation();
             
-            $("#homePage").css("height",$(window).height()-$(window).height()/1.8+"px");
-        });
-    }
+    //         $("#homePage").css("height",$(window).height()-$(window).height()/1.8+"px");
+    //     });
+    // }
 
-    $(document).on("blur","#globalOvrly",function(e){
-        e.preventDefault(); 
-        e.stopPropagation();
-        $("#homePage").css("height","auto");
-    });
+    // $(document).on("blur","#globalOvrly",function(e){
+    //     e.preventDefault(); 
+    //     e.stopPropagation();
+    //     $("#homePage").css("height","auto");
+    // });
+    
+    // $(".legend").html(GLOBAL_MESSAGE[LANG].SELECT_PDF_YEAR);
+    // $("#mainTitle").html(GLOBAL_MESSAGE[LANG].APP_TITLE);
+    // $("#actionMain").html(GLOBAL_MESSAGE[LANG].ENTER_BTN);
+    
+    // if(LANG=="EN"){
+    //     $("#langImg").attr("src","img/langEn.png");
+    //     // $("#mainTitle").html("<h1>ECONOMIC<br/>REPORT<br/>ON INDONESIA</h1>");
+    // } else {
+    //     $("#langImg").attr("src","img/langId.png");
+    //     // $("#mainTitle").html("<h1>Laporan<br/>Perekonomian<br/>Indonesia</h1>");
+    // }
 
     var dWidth = $(document).width();
     var dHeight = $(document).height();
@@ -78,11 +100,28 @@ $(document).ready(function (event) {
     $("#pdfImage").css("height",dHeight+"px");
 
     document.addEventListener("backbutton", function(e){
-        if($(".overlay").hasClass("on")) {
-            $(".overlay").removeClass("on");
-            return false;
+            
+        if ($.mobile.activePage.attr('id')=='mainPage') {
+            if (confirm("Apakah anda ingin keluar dari aplikasi?")) {
+                /* Here is where my AJAX code for logging off goes */
+                if (navigator.app) {
+                    navigator.app.exitApp();
+                    // return false;
+                } else if (navigator.device) {
+                    navigator.device.exitApp();
+                    // return false;
+                }
+            }
+            else {
+                return false;
+            }
         } else {
-            parent.history.back();
+            if($(".overlay").hasClass("on")) {
+                $(".overlay").removeClass("on");
+                return false;
+            } else {
+                parent.history.back();
+            }
         }
     });
 
@@ -90,10 +129,11 @@ $(document).ready(function (event) {
         e.stopPropagation();
         e.stopImmediatePropagation();
         var selY = $("#selectYear").val();
+        console.log(selY);
         selectedYear = selY;
-        var pdfObj = pdfLink[selectedYear];
+        var pdfObj = pdfLink[selectedYear][LANG];
         if(pdfObj == "" || pdfObj == undefined){
-            alert("Comming soon");
+            showAlert("Comming soon");
             return false;
         } 
         $.mobile.changePage("homePage.html",{transition: "flip"});
@@ -180,16 +220,60 @@ $(document).ready(function (event) {
     //     e.stopImmediatePropagation();
     //     $("#searchBookmarkOverlay").removeClass("on");
     // });
+
+    $(document).on("pageinit","#mainPage",function(e){
+        $(".legend").html(GLOBAL_MESSAGE[LANG].SELECT_PDF_YEAR);
+        $("#mainTitle").html(GLOBAL_MESSAGE[LANG].APP_TITLE);
+        $("#actionMain").html(GLOBAL_MESSAGE[LANG].ENTER_BTN);
+        
+        if(LANG=="EN"){
+            $("#langImg").attr("src","img/langId.png");
+        } else {
+            $("#langImg").attr("src","img/langEn.png");
+        }
+
+        $(document).on("click","#langChange",function(e){
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            
+            console.log(LANG);
+
+            if(LANG=="EN"){
+                $("#langImg").attr("src","img/langEn.png");
+                window.localStorage.setItem("LANG_ID","ID");
+                LANG="ID";
+                // $("#mainTitle").html("<h1>ECONOMIC<br/>REPORT<br/>ON INDONESIA</h1>");
+            } else {
+                $("#langImg").attr("src","img/langId.png");
+                window.localStorage.setItem("LANG_ID","EN");
+                LANG="EN";
+                // $("#mainTitle").html("<h1>Laporan<br/>Perekonomian<br/>Indonesia</h1>");
+            }
+            
+            $(".legend").html(GLOBAL_MESSAGE[LANG].SELECT_PDF_YEAR);
+            $("#mainTitle").html(GLOBAL_MESSAGE[LANG].APP_TITLE);
+            $("#actionMain").html(GLOBAL_MESSAGE[LANG].ENTER_BTN);
+        });
+    });
     
     $(document).on("pageinit","#homePage",function(e){
         var dWidth = $(document).width();
         var dHeight = $(document).height();
         
         //var sdBarH = $(window).height();
-
+        console.log(selectedYear);
+        console.log(LANG);
+        console.log(GLOBAL_MESSAGE);
         //$("#homePage #overlayConent").css("height",sdBarH-160 + "px");
+        
         $("#tagLine").html("LPI " + selectedYear);
-        $("#redBarTitle").html("Laporan Perekonomian Indonesia "+ selectedYear );
+        $("#redBarTitle").html(GLOBAL_MESSAGE[LANG].SIDE_TITLE +" "+ selectedYear );
+        $("#prakata").html(GLOBAL_MESSAGE[LANG].PRAKATA);
+        $("#readPrakata").html(GLOBAL_MESSAGE[LANG].READ_MORE_BTN);
+        $("#dewanGub").html(GLOBAL_MESSAGE[LANG].DEWAN_GUB);
+        $("#mainGubImgSrc").attr("src",GLOBAL_MESSAGE[LANG].MAIN_GUB_IMG);
+        $("#dewangubImg").attr("src",GLOBAL_MESSAGE[LANG].DEWAN_GUB_IMG);
+
         if(selectedUrl !=""){
             $(".pdfTitle").html("LPI " + selectedYear);
             $("#pdfImage").attr("src",selectedUrl);
@@ -210,27 +294,43 @@ $(document).ready(function (event) {
                 }
             }, 800);
         }
+        var pdfObj = "";
+        var pdfYear = "";
+        
+        // if(selectedYear == "2018") {
+        //     pdfYear = pdfLink[selectedYear][LANG]; 
+        //     pdfObj = pdfLink[selectedYear][LANG].content;
+        // } else {
+        //     pdfYear = pdfLink[selectedYear]; 
+        //     pdfObj = pdfLink[selectedYear].content;
+        // }
 
-        var pdfObj = pdfLink[selectedYear].content;
+        pdfYear = pdfLink[selectedYear][LANG]; 
+        pdfObj = pdfLink[selectedYear][LANG].content;
+
         console.log(pdfObj);
         var restHtml="";
         console.log($("#laporanTitle"));
 
-        $("#laporanTitle").html(pdfLink[selectedYear].title);
+        $("#laporanTitle").html(pdfYear.title);
         
-        if(selectedYear!="2018"){
-            $("#prakataDwn").hide();
-            $("#dewanGubernur").hide();
-        } else {
+        if (selectedYear == "2018" || selectedYear == "2019" || selectedYear == "2020") {
+            $("#mainGubImgSrc").attr("src","img/mainGub_"+selectedYear+"_"+LANG+".png")
+            $("#dewangubImg").attr("src","img/dewanGub_"+selectedYear+"_"+LANG+".png")
             $("#prakataDwn").show();
             $("#dewanGubernur").show();
-            $("#readPrakata").attr("data-url",pdfLink[selectedYear].prakataLink);
+            $("#readPrakata").attr("data-url",pdfYear.prakataLink);
             $("#readPrakata").attr("data-chapter","Prakata");
+        } else {
+            $("#prakataDwn").hide();
+            $("#dewanGubernur").hide();
         }
         
-        $("#prakataId").html(pdfLink[selectedYear].prakata);
+        $("#prakataId").html(pdfYear.prakata);
         
-        $("#mainImage").html('<img src="img/'+pdfLink[selectedYear].cover+'" />');
+        var vREAD_MORE_BTN_2020 = GLOBAL_MESSAGE[LANG].READ_MORE_BTN;
+
+        $("#mainImage").html('<img src="img/'+pdfYear.cover+'" />');
         for(var i=0;i<pdfObj.length;i++) {
             restHtml +='<div class="card">'+
                         '    <div class="card-header" id="headingOne">'+
@@ -243,7 +343,7 @@ $(document).ready(function (event) {
                         '    <div id="collapse'+i+'" class="collapse" aria-labelledby="headingOne" data-parent="#mainContent">'+
                         '    <div class="card-body">'+
                                 pdfObj[i].desc+
-                        '        <div id="readPdf" data-url="'+pdfObj[i].link+'" data-chapter="'+pdfObj[i].title+'"  class="readMoreBtn smallBtn">Baca lebih ></div>'+
+                        '        <div id="readPdf" data-url="'+pdfObj[i].link+'" data-chapter="'+pdfObj[i].title+'"  class="readMoreBtn smallBtn">'+vREAD_MORE_BTN_2020+'</div>'+
                         '    </div>'+
                         '    </div>'+
                         '</div>';
@@ -264,6 +364,10 @@ $(document).ready(function (event) {
         var dHeight = $(window).height();
         $("#bookmarkPage .content").css("min-height",dHeight+"px");
         $("#bkTagLine").html("LPI " + selectedYear);
+        
+        $("#searchOverlayInput").attr("placeholder",GLOBAL_MESSAGE[LANG].SEARCH_KEYWORD);
+        $("#schOvrly").attr("placeholder",GLOBAL_MESSAGE[LANG].SEARCH_GLOBAL);
+        $("#schOrlyBtn").html(GLOBAL_MESSAGE[LANG].SEARCH_BTN);
 
         generateSideBar("bookmarkPage");
         //$("#bookmarkPage #overlayConent").css("height",dHeight-160 + "px");
@@ -298,7 +402,7 @@ $(document).ready(function (event) {
                 });
             }
         } else {
-            restHtml += '<div id="bookmarkEmpty>Tidak ada bookmark</div>';
+            restHtml += '<div id="bookmarkEmpty>'+GLOBAL_MESSAGE[LANG].BOOKMARK_EMPTY+'</div>';
             $("#bookmarkList").html(restHtml);
         }
         
@@ -328,7 +432,7 @@ $(document).ready(function (event) {
 
             window.localStorage.setItem("bookmark",JSON.stringify(bkObj));
 
-            showAlert("Bookmark telah dihapus");
+            showAlert(GLOBAL_MESSAGE[LANG].BOOKMARK_DELETE);
             
             $(this).parent().parent().remove();
         });
@@ -353,7 +457,7 @@ $(document).ready(function (event) {
             e.stopImmediatePropagation();
             var key = $("#schOvrly").val();
             if(key =="") {
-                showAlert("Kata Pencarian tidak boleh kosong");
+                showAlert(GLOBAL_MESSAGE[LANG].EMPTY_KEYWORD);
                 return false;
             }
 
@@ -372,6 +476,8 @@ $(document).ready(function (event) {
         var dHeight = $(window).height();
         $("#searchResultPage .content").css("min-height",dHeight+"px");
         $("#searchResTagLine").html("LPI " + selectedYear);
+
+        $(".searchResultTitle").html(GLOBAL_MESSAGE[LANG].SEARCH_RESULT_TITLE);
 
         generateSideBar("searchResultPage");
         console.log(globalSearchKeyword);
@@ -452,6 +558,8 @@ $(document).ready(function (event) {
         var dHeight = $(window).height();
         $("#notesPage .content").css("min-height",dHeight+"px");
         $("#notesTagLine").html("LPI " + selectedYear);
+        $("#schNtsOvrly").attr("placeholder",GLOBAL_MESSAGE[LANG].SEARCH_GLOBAL);
+        $("#schNtsOrlyBtn").html(GLOBAL_MESSAGE[LANG].SEARCH_BTN);
 
         generateSideBar("notesPage");
         //$("#notesPage #overlayConent").css("height",dHeight-160 + "px");
@@ -486,7 +594,7 @@ $(document).ready(function (event) {
                 });
             }
         } else {
-            restHtml += '<div id="bookmarkEmpty>Tidak ada bookmark</div>';
+            restHtml += '<div id="bookmarkEmpty>'+GLOBAL_MESSAGE[LANG].NOTES_EMPTY+'</div>';
             $("#notesList").html(restHtml);
         }
         
@@ -517,7 +625,7 @@ $(document).ready(function (event) {
 
             window.localStorage.setItem("notes",JSON.stringify(bkObj));
 
-            showAlert("Notes telah dihapus");
+            showAlert(GLOBAL_MESSAGE[LANG].NOTES_DELETE);
             
             $(this).parent().parent().remove();
         });
@@ -558,7 +666,7 @@ $(document).ready(function (event) {
 
             window.localStorage.setItem("notes",JSON.stringify(bkObj));
 
-            showAlert("Notes telah dihapus");
+            showAlert(GLOBAL_MESSAGE[LANG].NOTES_DELETE);
             
             $("#notesPage").val("");
         });
@@ -574,7 +682,7 @@ $(document).ready(function (event) {
             e.stopImmediatePropagation();
             var key = $("#schNtsOvrly").val();
             if(key =="") {
-                showAlert("Kata Pencarian tidak boleh kosong");
+                showAlert(GLOBAL_MESSAGE[LANG].EMPTY_KEYWORD);
                 return false;
             }
 
@@ -586,6 +694,8 @@ $(document).ready(function (event) {
         var dHeight = $(window).height();
         $("#highlightPage .content").css("min-height",dHeight+"px");
         $("#highlightTagLine").html("LPI " + selectedYear);
+        $("#schHighOvrly").attr("placeholder",GLOBAL_MESSAGE[LANG].SEARCH_GLOBAL);
+        $("#schHighOrlyBtn").html(GLOBAL_MESSAGE[LANG].SEARCH_BTN);
         
         generateSideBar("highlightPage");
         //$("#highlightPage #overlayConent").css("height",dHeight-160 + "px");
@@ -619,7 +729,7 @@ $(document).ready(function (event) {
                 });
             }
         } else {
-            restHtml += '<div id="bookmarkEmpty>Tidak ada highlight</div>';
+            restHtml += '<div id="bookmarkEmpty>'+GLOBAL_MESSAGE[LANG].HIGHLIGHT_EMPTY+'</div>';
             $("#highlightList").html(restHtml);
         }
 
@@ -649,7 +759,7 @@ $(document).ready(function (event) {
 
             window.localStorage.setItem("highlight",JSON.stringify(bkObj));
 
-            showAlert("Highlight telah dihapus");
+            showAlert(GLOBAL_MESSAGE[LANG].HIGHLIGHT_DELETE);
             
             $(this).parent().parent().remove();
         });
@@ -675,7 +785,7 @@ $(document).ready(function (event) {
             e.stopImmediatePropagation();
             var key = $("#schHighOvrly").val();
             if(key =="") {
-                showAlert("Kata Pencarian tidak boleh kosong");
+                showAlert(GLOBAL_MESSAGE[LANG].EMPTY_KEYWORD);
                 return false;
             }
 
@@ -687,7 +797,7 @@ $(document).ready(function (event) {
     $(document).on("click",".collapseTitle",function(e){
         e.stopPropagation();
         e.stopImmediatePropagation();
-        
+        $(".collapseArrowImg").removeClass("down");
         if($(this).attr("aria-expanded") == "true") {
             $(this).find(".collapseArrowImg").addClass("down");
         } else {
@@ -740,7 +850,8 @@ $(document).ready(function (event) {
     $(document).on("click",".goToIndex",function(e){
         e.stopPropagation();
         e.stopImmediatePropagation();
-        $.mobile.changePage("index.html",{transition: "flip"});
+        selectedYear="";
+        $.mobile.changePage("mainPage.html",{transition: "flip"});
     });
 
     $(document).on("click",".goToHome",function(e){
@@ -869,7 +980,7 @@ $(document).ready(function (event) {
         var notesPage = $("#notesPage").val();
 
         if(notesPage == ""){
-            showAlert("Notes tidak boleh kosong");
+            showAlert(GLOBAL_MESSAGE[LANG].NOTES_CANT_EMPTY);
             return false;
         }
 
@@ -902,7 +1013,7 @@ $(document).ready(function (event) {
 
         window.localStorage.setItem("notes",JSON.stringify(noteObj));
 
-        showAlert("Notes telah ditambahkan");
+        showAlert(GLOBAL_MESSAGE[LANG].NOTES_ADD);
         $("#darkOverlay").fadeOut();
         $("#notesOverlay").fadeOut();
     });
@@ -964,7 +1075,7 @@ function setBookmark(el){
 
     console.log(bkObj);
     
-    showAlert("Bookmark telah ditambahkan");
+    showAlert(GLOBAL_MESSAGE[LANG].BOOKMARK_ADDED);
     window.localStorage.setItem("bookmark",JSON.stringify(bkObj));
 
     // var excerpt = "";
@@ -1026,7 +1137,19 @@ function showAlert(content) {
 }
 
 function generateSideBar(target){
-    var pdfObj = pdfLink[selectedYear].content;
+    var pdfObj = "";
+    $(".lpiLainTitle").html(GLOBAL_MESSAGE[LANG].LPI_LAIN);
+    $("#globalSearch").attr("placeholder",GLOBAL_MESSAGE[LANG].SEARCH_KEYWORD);
+    $("#globalOvrly").attr("placeholder",GLOBAL_MESSAGE[LANG].SEARCH_KEYWORD);
+    $("#globalSchOrlyBtn").html(GLOBAL_MESSAGE[LANG].SEARCH_BTN);
+
+    // if(selectedYear=="2018") {
+    //     pdfObj = pdfLink[selectedYear][LANG].content; 
+    // } else {
+    //     pdfObj = pdfLink[selectedYear].content; 
+    // }
+    // var pdfObj = pdfLink[selectedYear].content;
+    pdfObj = pdfLink[selectedYear][LANG].content; 
     var restHtml="";
 
     for(var i=0;i<pdfObj.length;i++) {
@@ -1165,20 +1288,23 @@ function generateHome(){
             }, 800);
         }
 
-        var pdfObj = pdfLink[selectedYear].content;
+        // var pdfObj = pdfLink[selectedYear].content;
+        var pdfObj = pdfLink[selectedYear][LANG].content;
         
         var restHtml="";
 
-        $("#laporanTitle").html(pdfLink[selectedYear].title);
-        if(selectedYear!="2018"){
-            $("#prakataDwn").hide();
-            $("#dewanGubernur").hide();
-        } else {
+        $("#laporanTitle").html(pdfLink[selectedYear][LANG].title);
+        if (selectedYear == "2018" || selectedYear == "2019" || selectedYear == "2020") {
+            $("#mainGubImgSrc").attr("src","img/mainGub_"+selectedYear+"_"+LANG+".png")
+            $("#dewangubImg").attr("src","img/dewanGub_"+selectedYear+"_"+LANG+".png")
             $("#prakataDwn").show();
             $("#dewanGubernur").show();
+        } else {
+            $("#prakataDwn").hide();
+            $("#dewanGubernur").hide();
         }
-        $("#prakataId").html(pdfLink[selectedYear].prakata);
-        $("#mainImage").html('<img src="img/'+pdfLink[selectedYear].cover+'" />');
+        $("#prakataId").html(pdfLink[selectedYear][LANG].prakata);
+        $("#mainImage").html('<img src="img/'+pdfLink[selectedYear][LANG].cover+'" />');
         for(var i=0;i<pdfObj.length;i++) {
             restHtml +='<div class="card">'+
                         '    <div class="card-header" id="headingOne">'+
@@ -1326,7 +1452,11 @@ function reRenderBookmark(key) {
             });  
             
             $("#searchBookmarkOverlay").removeClass("on");
+        } else {
+            $("#searchBookmarkOverlay").removeClass("on");
         }
+    } else {
+        $("#searchBookmarkOverlay").removeClass("on");
     }
 }
 
@@ -1383,7 +1513,11 @@ function reRenderNotes(key) {
             });  
             
             $("#searchBookmarkOverlay").removeClass("on");
+        } else {
+            $("#searchBookmarkOverlay").removeClass("on");
         }
+    } else {
+        $("#searchBookmarkOverlay").removeClass("on");
     }
 }
 
@@ -1440,6 +1574,10 @@ function reRenderHighlight(key){
             });  
             
             $("#searchBookmarkOverlay").removeClass("on");
+        } else {
+            $("#searchBookmarkOverlay").removeClass("on");
         }
+    } else {
+        $("#searchBookmarkOverlay").removeClass("on");
     }
 }
