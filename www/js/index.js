@@ -314,9 +314,16 @@ $(document).ready(function (event) {
 
         $("#laporanTitle").html(pdfYear.title);
         
-        if (selectedYear == "2018" || selectedYear == "2019" || selectedYear == "2020") {
-            $("#mainGubImgSrc").attr("src","img/mainGub_"+selectedYear+"_"+LANG+".png")
-            $("#dewangubImg").attr("src","img/dewanGub_"+selectedYear+"_"+LANG+".png")
+        if (selectedYear == "2018" || selectedYear == "2021") {
+            $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+selectedYear+"_"+LANG+".jpg")
+            $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg")
+            $("#prakataDwn").show();
+            $("#dewanGubernur").show();
+            $("#readPrakata").attr("data-url",pdfYear.prakataLink);
+            $("#readPrakata").attr("data-chapter","Prakata");
+        } else if (selectedYear == "2019" || selectedYear == "2020") {
+            $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+LANG+".jpg");
+            $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg");
             $("#prakataDwn").show();
             $("#dewanGubernur").show();
             $("#readPrakata").attr("data-url",pdfYear.prakataLink);
@@ -325,9 +332,9 @@ $(document).ready(function (event) {
             $("#prakataDwn").hide();
             $("#dewanGubernur").hide();
         }
-        
+
         $("#prakataId").html(pdfYear.prakata);
-        
+
         var vREAD_MORE_BTN_2020 = GLOBAL_MESSAGE[LANG].READ_MORE_BTN;
 
         $("#mainImage").html('<img src="img/'+pdfYear.cover+'" />');
@@ -1294,14 +1301,19 @@ function generateHome(){
         var restHtml="";
 
         $("#laporanTitle").html(pdfLink[selectedYear][LANG].title);
-        if (selectedYear == "2018" || selectedYear == "2019" || selectedYear == "2020") {
-            $("#mainGubImgSrc").attr("src","img/mainGub_"+selectedYear+"_"+LANG+".png")
-            $("#dewangubImg").attr("src","img/dewanGub_"+selectedYear+"_"+LANG+".png")
-            $("#prakataDwn").show();
-            $("#dewanGubernur").show();
+        if (selectedYear == "2018" || selectedYear == "2021") {
+          $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+selectedYear+"_"+LANG+".jpg")
+          $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg")
+          $("#prakataDwn").show();
+          $("#dewanGubernur").show();
+        } else if (selectedYear == "2019" || selectedYear == "2020") {
+          $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+LANG+".jpg");
+          $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg");
+          $("#prakataDwn").show();
+          $("#dewanGubernur").show();
         } else {
-            $("#prakataDwn").hide();
-            $("#dewanGubernur").hide();
+          $("#prakataDwn").hide();
+          $("#dewanGubernur").hide();
         }
         $("#prakataId").html(pdfLink[selectedYear][LANG].prakata);
         $("#mainImage").html('<img src="img/'+pdfLink[selectedYear][LANG].cover+'" />');

@@ -13,11 +13,25 @@ var selectedYear = ""
 
 const report2020pdflink = "https://www.bi.go.id/id/publikasi/laporan/Documents/LPI_2020.pdf";
 const report2020vEngPdfLink = "https://www.bi.go.id/en/publikasi/laporan/Documents/10.LPI2020_full.pdf";
+const comingSoonIDLink = "https://storage.googleapis.com/bi-lpi-2020/LPI-COMING-SOON-2021-ID.pdf";
+const comingSoonENLink = "https://storage.googleapis.com/bi-lpi-2020/LPI-COMING-SOON-2021-EN.pdf";
+
+const report_2021_ID_prakata = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_forewood.pdf";
+const report_2021_ID_overview = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_overview.pdf";
+const report_2021_ID_bab1 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_BAB1.pdf";
+const report_2021_ID_bab2 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_BAB2.pdf";
+const report_2021_ID_bab3 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_BAB3.pdf";
+const report_2021_ID_bab4 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_BAB4.pdf";
+const report_2021_ID_bab5 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_BAB5.pdf";
+const report_2021_ID_bab6 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_BAB6.pdf";
+const report_2021_ID_appendices = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_lampiran.pdf";
+const report_2021_ID_full = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_FULL.pdf";
+
 
 var pdfLink = {
 	"2015": {
 		"ID" : {
-			"cover" : "cover2015.png",
+			"cover" : "cover2015.jpg",
 			"title": "Bersinergi Mengawal Stabilitas, Mewujudkan Reformasi Struktural",
 			"prakata" : "Perubahan konstelasi ekonomi global sejak krisis 2008 lalu, yang terasa begitu luas dan mendalam, telah memunculkan "+
 						"berbagai tantangan baru yang semakin komplek dalam pengelolaan stabilitas makroekonomi. Di tengah berbagai upaya yang terus ditempuh "+
@@ -84,7 +98,7 @@ var pdfLink = {
 					]
 		},
 		"EN" : {
-			"cover" : "cover2015.png",
+			"cover" : "cover2015.jpg",
 			"title": "Synergy in Safeguarding Stability, Realizing Structural Reforms",
 			"prakata" : "Perubahan konstelasi ekonomi global sejak krisis 2008 lalu, yang terasa begitu luas dan mendalam, telah memunculkan "+
 						"berbagai tantangan baru yang semakin komplek dalam pengelolaan stabilitas makroekonomi. Di tengah berbagai upaya yang terus ditempuh "+
@@ -153,7 +167,7 @@ var pdfLink = {
 	},
 	"2016": {
 		"ID" : {
-			"cover" : "cover2016.png",
+			"cover" : "cover2016.jpg",
 			"title": "Bersinergi Memperkuat Resiliensi, Mendorong Momentum Pemulihan Ekonomi",
 			"prakata" : "Tahun 2016 yang pada awalnya diharapkan menjadi tahun percepatan pemulihan ekonomi "+
 						"domestik kembali menjadi tahun yang penuh tantangan seiring dengan perkembangan global yang masih "+
@@ -212,7 +226,7 @@ var pdfLink = {
 					]
 		},
 		"EN" : {
-			"cover" : "cover2016.png",
+			"cover" : "cover2016.jpg",
 			"title": "SYNERGY IN STRENGTHENING RESILIENCE, CAPITALIZING THE MOMENTUM OF ECONOMIC RECOVERY",
 			"prakata" : "In 2016, the Indonesian economy held its ground amid sluggish global economic conditions replete with uncertainty. Key to this achievement was the structural predominance of domestic demand and support from adequate policy responses. In turn, the combination of these two factors mitigated the risk of fallout from weak global economic growth, protracted low global commodity prices, and the heightened uncertainty hanging over global financial markets. In 2016, Indonesia's economic growth climbed from 4.9% in 2015 to 5.0%. Higher growth was also supported by a sound level of economic stability marked by low inflation, decline in the current account deficit, stable exchange rate, and well maintained financial system stability with low systemic risks.",
 			"content": [{
@@ -268,7 +282,7 @@ var pdfLink = {
 	},
 	"2017": {
 		"ID" : {
-			"cover" : "cover2017.png",
+			"cover" : "cover2017.jpg",
 			"title": "Mengoptimalkan Momentum, Memperkuat Struktur",
 			"prakata" : "Ketika saya mulai memimpin Bank Indonesia pada 2013, perekonomian sedang menghadapi "+
 						"meningkatnya ketidakpastian pasar keuangan global terkait perubahan arah kebijakan "+
@@ -363,7 +377,7 @@ var pdfLink = {
 			]
 		},
 		"EN" : {
-			"cover" : "cover2017.png",
+			"cover" : "cover2017.jpg",
 			"title": "Optimizing Momentum, Reinforcing Structures",
 			"prakata" : "Macroeconomic stability in Indonesia strengthened further in 2017, in tandem with gradual progress in the economic recovery. "+
 						"Economic growth edged upwards and improvement in the structure of growth set in during the second half of the year. "+
@@ -704,7 +718,7 @@ var pdfLink = {
 	},
 	"2019": {
 		"ID" : {
-			"cover" : "cover2019.png",
+			"cover" : "cover2019.jpg",
 			"title": "Sinergi, Transformasi, dan Inovasi menuju Indonesia maju",
 			"prakata" : "Memasuki tahun kedua masa jabatan saya sebagai Gubernur Bank Indonesia, berbagai tantangan dari perkembangan ekonomi dunia terus menguat dan perlu disikapi dengan "+
 						"respons yang tepat. Sejumlah pergeseran struktural dalam beberapa tahun terakhir bergerak makin cepat di 2019. Pergeseran dicirikan oleh kebijakan banyak negara yang "+
@@ -804,7 +818,7 @@ var pdfLink = {
 			]
 		},
 		"EN" : {
-			"cover" : "cover2019.png",
+			"cover" : "cover2019.jpg",
 			"title": "Synergy, Transformation and Innovation towards an Advanced Indonesia",
 			"prakata" : "Early in my second year as Governor of Bank Indonesia, the global economy was beset by various challenges which entailed appropriate policy responses. Several structural shifts in the global economic landscape have persisted and gained more momentum in 2019. Some structural shifts were reflected by increasingly domestic-oriented policies in many countries and rising volatility in global capital flows. The trends were seen in 2019 that contributing to the slower global economy growth and higher financial market uncertainty, especially up to the third quarter of 2019. Structural shift has also taken place in the form of increasingly digitalization of the economy and finance that has changed the behaviour of economic agents. Inevitably, these dynamics of the economy created complexities on macroeconomic management that emphasizes the authorities for not only rely on one policy instrument, but it need to be reinforced by other policy instruments within an integrated policy mix.",
 			"prakataLink" : "https://www.bi.go.id/en/publikasi/laporan/Documents/9_LPI2019EN.pdf#page=16",
@@ -869,7 +883,7 @@ var pdfLink = {
 	},
 	"2020": {
 		"ID" : {
-			"cover" : 	"cover2020.png",
+			"cover" : 	"cover2020.jpg",
 			"title": 	"Bersinergi Membangun Optimisme Pemulihan Ekonomi",
 			"prakata" : "Alhamdulillah, puji syukur kami panjatkan ke hadirat Allah, Tuhan Yang Mahakuasa, atas rahmat-Nya Bank Indonesia memublikasikan dua laporan akuntabilitas sekaligus, " + 
 						"yaitu Laporan Perekonomian Indonesia (LPI) 2020 dan Laporan Tahunan Bank Indonesia (LTBI) 2020. Tahun ini, kami memulai tradisi baru, yang diawali Pertemuan Tahunan Bank Indonesia (PTBI) " + 
@@ -965,7 +979,7 @@ var pdfLink = {
 			]
 		},
 		"EN" : {
-			"cover" : 	"cover2020.png",
+			"cover" : 	"cover2020.jpg",
 			"title" : 	"Synergize to Build Optimism for Economic Recovery",
 			"prakata" : "Let us offer our praises to God the Almighty, for by His grace and mercy Bank Indonesia has simultaneously published two reports of accountability, " + 
 						"the 2020 Economic Report on Indonesia and the 2020 Bank Indonesia Annual Report. " + 
@@ -1058,15 +1072,142 @@ var pdfLink = {
 				}
 			]
 		}
+	},
+  "2021": {
+		"ID" : {
+			"cover" : 	"cover2021.jpg",
+			"title": 	"BANGKIT DAN OPTIMIS: SINERGI DAN INOVASI UNTUK PEMULIHAN EKONOMI",
+			"prakata" : "Alhamdulillah, puji syukur kami panjatkan ke hadirat Allah, Tuhan Yang Maha Kuasa, atas rahmat-Nya Bank Indonesia dapat melanjutkan tradisi publikasi laporan transparansi dan akuntabilitas pada awal tahun, setelah pelaksanaan Pertemuan Tahunan Bank Indonesia (PTBI). Pada Januari 2022, Bank Indonesia memublikasikan 3 (tiga) laporan transparansi dan akuntabilitas sekaligus, yaitu Laporan Perekonomian Indonesia (LPI) 2021, Laporan Ekonomi dan Keuangan Syariah (LEKSI) 2021, dan Laporan Tahunan Bank Indonesia (LTBI) 2021, setelah pelaksanaan PTBI 2021 pada 24 November 2021. Publikasi ketiga laporan tersebut sebagai wujud komitmen tinggi kami untuk memperkuat transparansi dan akuntabilitas Bank Indonesia sebagaimana diamanatkan dalam Undang-Undang Bank Indonesia.<br/><br/>" +
+                  "Kami memandang bahwa perbaikan ekonomi global pada 2021 terus berlanjut meski belum berimbang dengan pemulihan ekonomi di <i>Advanced Economies</i> (AEs) yang lebih cepat dibandingkan dengan ekonomi negara <i>Emerging Market and Developing Economies</i> (EMDEs) akibat perbedaan tingkat vaksinasi dan kemampuan stimulus kebijakan masing-masing negara. Pada 2021, pemulihan ekonomi global sempat tertahan seiring dengan merebaknya Covid-19 varian Delta pada triwulan II 2021. Lebih dari itu, varian Delta memiliki karakteristik yang sangat cepat menular dan lebih ganas dibandingkan dengan varian lainnya, sehingga berdampak signifikan pada pada kesehatan, kemanusiaan, dan perekonomian dunia. Sejalan dengan peningkatan penyebaran Covid-19 varian Delta, ketidakpastian pasar keuangan global masih berlanjut di tengah antisipasi pasar terhadap kebijakan <i>tapering</i> the Fed serta kekhawatiran tekanan inflasi yang berlangsung lebih lama.<br/><br/>",
+			"prakataLink" : report_2021_ID_prakata,
+			"content": [
+				{
+					"title": 	"Tinjauan Umum",
+					"link": 	report_2021_ID_overview,
+          "desc"  : "Perbaikan ekonomi global pada 2021 terus berlanjut meski tidak merata dengan ketidakpastian pasar keuangan yang berlanjut. Proses pemulihan ekonomi nasional juga terus berlangsung dengan stabilitas yang tetap terjaga, meski sempat tertahan pada triwulan III 2021 seiring dengan merebaknya varian Delta. Sinergi kebijakan yang erat dan kinerja perekonomian tahun 2021 menjadi dasar untuk semakin bangkit dan optimis akan pemulihan ekonomi Indonesia yang lebih baik pada 2022, didukung oleh satu kondisi prasyarat, yaitu sinergi kebijakan untuk akselerasi vaksinasi dan penanganan Covid-19 dengan pembukaan sektor-sektor ekonomi prioritas, serta 5 (lima) respons kebijakan sebagai kondisi yang diperlukan. Sejalan dengan hal tersebut, bauran kebijakan Bank Indonesia pada 2022 akan bersinergi dan menjadi bagian dari arah kebijakan ekonomi nasional untuk mengakselerasi pemulihan dan tetap menjaga stabilitas perekonomian. Penguatan sinergi dan inovasi tersebut didukung oleh percepatan reformasi struktural baik di sektor riil maupun akselerasi ekonomi dan keuangan digital nasional, serta transformasi bauran kebijakan Bank Indonesia, untuk memperkuat upaya menuju Indonesia Maju.",
+					"class" : ""
+				},
+				{
+					"title": 	"Bab 1 Kinerja dan Prospek Ekonomi Global: Pemulihan Belum Berimbang, Ketidakpastian Pasar Keuangan Berlanjut",
+					"link": 	report_2021_ID_bab1,
+					"desc"  : "Perbaikan ekonomi global pada 2021 terus berlanjut meski belum berimbang dengan pemulihan ekonomi di <i>Advanced Economies</i> (AEs) yang lebih cepat dibandingkan dengan ekonomi negara <i>Emerging Market and Developing Economies</i> (EMDEs) akibat perbedaan tingkat vaksinasi dan kemampuan stimulus kebijakan masing-masing negara. Ketidakpastian pasar keuangan global masih belanjut seiring dengan risiko yang masih mengemuka, antara lain terkait peningkatan penyebaran Covid-19 varian Delta, antisipasi pasar terhadap kebijakan penurunan stimulus (<i>tapering</i>) the Fed, serta kekhawatiran tekanan inflasi yang berlangsung lebih lama. Pandemi Covid-19 juga menimbulkan setidaknya 7 (tujuh) hal penting yang perlu diwaspadai dan diantisipasi dengan baik agar mendukung pemulihan ekonomi global yang diperkirakan berlanjut pada 2022. Koordinasi kebijakan internasional, termasuk agenda Presidensi Indonesia di G20 pada 2022, ditempuh untuk terus memperkuat pemulihan ekonomi global yang sedang berjalan.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 2 Kinerja dan Prospek Ekonomi Nasional: Proses Pemulihan Terus Berlangsung, Stabilitas Terjaga",
+					"link": 	report_2021_ID_bab2,
+					"desc"  : "Proses pemulihan perekonomian Indonesia pada tahun 2021 dipengaruhi oleh perkembangan pandemi Covid-19. Perbaikan ekonomi yang berlangsung sejak triwulan I 2021 terus berlanjut meski sempat tertahan oleh merebaknya Covid-19 varian Delta pada triwulan III 2021. Secara keseluruhan tahun 2021, ekonomi Indonesia diperkirakan membaik dan akan tumbuh lebih tinggi lagi pada 2022, disertai dengan nilai tukar yang stabil dan inflasi yang terkendali. Perbaikan kondisi ekonomi tersebut didukung oleh mobilitas yang terus meningkat sehubungan dengan semakin terkendalinya penyebaran Covid-19 dan adanya akselerasi vaksinasi. Pembukaan sektor-sektor ekonomi yang lebih luas, stimulus kebijakan yang berlanjut, dan tetap kuatnya kinerja ekspor juga menunjang prakiraan tersebut. Untuk itu, sinergi dan inovasi kebijakan ekonomi nasional perlu terus diperkuat untuk mendukung berlanjutnya proses pemulihan ekonomi ke depan.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 3 Bauran Kebijakan Bank Indonesia Tahun 2021: Mendorong Pemulihan Ekonomi Nasional, Menjaga Stabilitas",
+					"link": 	report_2021_ID_bab3,
+					"desc"  : "Sinergi kebijakan nasional terus diperkuat pada tahun 2021 untuk tetap menjaga stabilitas dan terus mendorong perbaikan ekonomi nasional. Kuatnya sinergi kebijakan ekonomi nasional antara Pemerintah, KSSK, dan Bank Indonesia dapat mendorong perbaikan ekonomi nasional dengan stabilitas makroekonomi dan sistem keuangan yang tetap terjaga. Koordinasi fiskal dan moneter semakin diperkuat melalui partisipasi Bank Indonesia dalam pendanaan APBN sebagai pelaksanaan UU No. 2 Tahun 2020. Untuk mendukung pemulihan ekonomi nasional, Bank Indonesia juga mengarahkan seluruh instrumen bauran kebijakan moneter, makroprudensial, dan sistem pembayaran, berkoordinasi erat dengan Pemerintah dan KSSK.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 4 Bangkit dan Optimis: Sinergi dan Inovasi untuk Pemulihan Ekonomi",
+					"link": 	report_2021_ID_bab4,
+					"desc"  : "Sinergi kebijakan yang erat dan kinerja perekonomian pada 2021 menjadi dasar untuk bangkit dan semakin optimis akan percepatan proses pemulihan ekonomi Indonesia pada 2022. Upaya pemulihan ekonomi tetap didasarkan pada kerangka sinergi kebijakan agar ekonomi kembali ke lintasan jangka panjangnya. Prospek ekonomi Indonesia pada 2022 akan semakin membaik sejalan dengan prakiraan peningkatan kinerja permintaan domestik dan perekonomian global. Stabilitas perekonomian diprakirakan tetap terjaga di tengah proses pemulihan perekonomian yang terus berlangsung. Prospek positif tersebut diperkuat dengan sinergi dan inovasi untuk menjaga momentum kebangkitan dan membangun optimisme pemulihan perekonomian nasional. Sinergi antara Bank Indonesia dengan Pemerintah Pusat dan Daerah, Komite Stabilitas Sistem Keuangan (KSSK), perbankan, dan dunia usaha akan terus diperkuat untuk meningkatkan kinerja perekonomian nasional yang berkesinambungan. Inovasi bauran kebijakan senantiasa diselaraskan dengan perkembangan kondisi global, domestik, serta kebijakan fiskal untuk mendukung berlanjutnya reformasi struktural perekonomian nasional sehingga dalam jangka menengah perekonomian terus meningkat dan kembali berada di lintasan menuju Indonesia Maju.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 5 Arah Bauran Kebijakan Bank Indonesia Tahun 2022: Mendorong Akselerasi Pemulihan Ekonomi, Menjaga Stabilitas",
+					"link": 	report_2021_ID_bab5,
+					"desc"  : "Bauran kebijakan Bank Indonesia pada 2022 akan bersinergi dan menjadi bagian dari arah kebijakan ekonomi nasional untuk mengakselerasi pemulihan dan tetap menjaga stabilitas perekonomian. Bauran kebijakan tersebut disusun berdasarkan perkembangan prospek ekonomi global dan merespons enam permasalahan yang menjadi agenda koordinasi kebijakan internasional dalam Presidensi Indonesia di G20 pada 2022. Terkait dengan hal ini, implementasi dari 5 (lima) instrumen kebijakan, yaitu: kebijakan moneter, kebijakan makroprudensial, digitalisasi sistem pembayaran, pendalaman pasar uang, serta ekonomi-keuangan inklusif dan hijau dalam bentuk bauran kebijakan memerlukan perhitungan, perencanaan, dan komunikasi yang baik. Sejalan dengan risiko meningkatnya tekanan instabilitas pasar keuangan global dari normalisasi kebijakan moneter the Fed dan sejumlah negara AEs, arah kebijakan moneter pada tahun 2022 akan lebih diarahkan untuk menjaga stabilitas (<i>pro-stability</i>), baik dalam aspek pencapaian sasaran inflasi dan stabilitas nilai tukar, maupun stabilitas makroekonomi dan sistem keuangan. Kebijakan makroprudensial, digitalisasi sistem pembayaran, pendalaman pasar uang, serta ekonomi-keuangan inklusif dan hijau akan terus diarahkan untuk mengakselerasi pemulihan ekonomi nasional (<i>pro-growth</i>). Arah kebijakan Bank Indonesia yang bersinergi dengan bauran kebijakan ekonomi nasional akan mendorong pertumbuhan ekonomi Indonesia untuk kembali berada di lintasan jangka menengah menuju Indonesia Maju.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 6 Transformasi Bauran Kebijakan dan Akselerasi Ekonomi Keuangan Digital",
+					"link": 	report_2021_ID_bab6,
+					"desc"  : "Transformasi bauran kebijakan Bank Indonesia merupakan perwujudan upaya menjadi bank sentral digital terdepan yang berkontribusi nyata terhadap perekonomian nasional dan terbaik di antara negara <i>emerging markets</i> untuk Indonesia Maju. Bank Indonesia melakukan penajaman arah strategis melalui rangkaian transformasi bauran kebijakan utama dan pendukung, termasuk penguatan kerangka operasi moneter, serta pendalaman pasar keuangan. Memasuki era peradaban baru digitalisasi ekonomi dan keuangan, Bank Indonesia juga bergerak cepat secara menyeluruh untuk melakukan akselerasi ekonomi dan keuangan digital yang inklusif dan efisien. Berbasiskan <i>Blueprint</i> Sistem Pembayaran Indonesia (BSPI) 2025, selama tahun 2021 Bank Indonesia berhasil menerbitkan paket kebijakan reformasi sistem pembayaran nasional yaitu reformasi regulasi, pengembangan dan implementasi BI-FAST sebagai infrastruktur sistem pembayaran ritel, dan pengembangan serta perluasan standar nasional sistem pembayaran QRIS (QR <i>Indonesian Standard</i>) dan SNAP (Standar Nasional <i>Open</i> API Pembayaran). Bank Indonesia juga mendorong penguatan UMKM melalui transformasi digital yang menyeluruh dan inklusif dilakukan di sepanjang rantai nilai untuk mendukung terciptanya ekosistem digital yang terintegrasi, serta selaras dengan pilar kebijakan pengembangan UMKM Bank Indonesia yaitu korporatisasi, kapasitas, dan pembiayaan.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Lampiran",
+					"link": 	report_2021_ID_appendices,
+					"desc": 	"",
+					"class" : 	""
+				},
+				{
+					"title": 	"Laporan Perekonomian Indonesia 2021",
+					"link": 	report_2021_ID_full,
+					"desc": 	"",
+					"class" : 	"indent"
+				}
+			]
+		},
+		"EN" : {
+			"cover" : 	"cover2021.jpg",
+			"title" : 	"Economic Report on Indonesia 2021",
+			"prakata" : "Coming Soon",
+      "prakataLink": comingSoonENLink,
+			"content": [
+				{
+					"title": 	"Overview",
+					"link": 	comingSoonENLink,
+					"desc"  : "Coming Soon",
+          "class" : ""
+				},
+				{
+					"title": 	"Chapter 1",
+					"link": 	comingSoonENLink,
+					"desc"  : "Coming Soon",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 2",
+					"link": 	comingSoonENLink,
+					"desc"  : "Coming Soon",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 3",
+					"link": 	comingSoonENLink,
+					"desc"  : "Coming Soon",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 4",
+					"link": 	comingSoonENLink,
+					"desc"  : "Coming Soon",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 5",
+					"link": 	comingSoonENLink,
+					"desc"  : "Coming Soon",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 6",
+					"link": 	comingSoonENLink,
+					"desc"  : "Coming Soon",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Appendices",
+					"link": 	comingSoonENLink,
+					"desc": 	"",
+					"class" : 	""
+				},
+				{
+					"title": 	"Economic Report on Indonesia 2021",
+					"link": 	comingSoonENLink,
+					"desc": 	"",
+					"class" : 	"indent"
+				}
+			]
+		}
 	}
 }
 
-var listLPI = ["2020","2019","2018","2017","2016","2015"];
+var listLPI = ["2021", "2020","2019","2018","2017","2016","2015"];
 
 var GLOBAL_MESSAGE = {
-    "ID" : {
-        "APP_TITLE" : "<h1>Laporan<br/>Perekonomian<br/>Indonesia</h1>",
-        "SELECT_PDF_YEAR" : "Silakan pilih tahun yang diinginkan",
+  "ID" : {
+    "APP_TITLE" : "<h1>Laporan<br/>Perekonomian<br/>Indonesia</h1>",
+    "SELECT_PDF_YEAR" : "Silakan pilih tahun yang diinginkan",
 		"ENTER_BTN" : "Masuk",
 		"SIDE_TITLE" : "Laporan Perekonomian Indonesia ",
 		"PRAKATA" : "Prakata",
@@ -1091,10 +1232,10 @@ var GLOBAL_MESSAGE = {
 		"SEARCH_RESULT_TITLE" :"Hasil Pencarian ",
 		"QUIT_APP" : "Apakah anda ingin keluar dari aplikasi?",
 		"NO_VERSION" : "Belum ada versi bahasa Indonesia."
-    },
-    "EN" : {
-        "APP_TITLE" : "<h1>ECONOMIC<br/>REPORT<br/>ON INDONESIA</h1>",
-        "SELECT_PDF_YEAR" : "Select edition",
+  },
+  "EN" : {
+    "APP_TITLE" : "<h1>ECONOMIC<br/>REPORT<br/>ON INDONESIA</h1>",
+    "SELECT_PDF_YEAR" : "Select edition",
 		"ENTER_BTN" : "Enter",
 		"SIDE_TITLE" : "Economic Report on Indonesia ",
 		"PRAKATA" : "Foreword",
@@ -1119,176 +1260,5 @@ var GLOBAL_MESSAGE = {
 		"SEARCH_RESULT_TITLE" :"Search Result",
 		"QUIT_APP" : "Are you sure want to quit?",
 		"NO_VERSION" : "There is no english version yet"
-    }
-}
-;
-
-// var pdfLink = {
-// 	"2016": {
-//         "cover" : "cover2016.png",
-//         "title": "Bersinergi Memperkuat Resiliensi, Mendorong Momentum Pemulihan Ekonomi",
-//         "prakata" : "Tahun 2016 yang pada awalnya diharapkan menjadi tahun percepatan pemulihan ekonomi "+
-//                     "domestik kembali menjadi tahun yang penuh tantangan seiring dengan perkembangan global yang masih "+
-//                     "belum menggembirakan. Ekonomi global masih belum pulih seperti yang diharapkan dan tetap diwarnai "+
-//                     "ketidakpastian. Dinamika ekonomi global pada 2016 berkisar pada tiga permasalahan utama yang "+
-//                     "terjadi sejak 2015, yaitu pertumbuhan ekonomi dunia yang belum kuat, harga komoditas yang masih "+
-//                     "rendah, dan ketidakpastian pasar keuangan yang tetap tinggi.",
-// 		"content": [{
-// 				"title": "Cover, Daftar isi dan Prakata",
-// 				"link": "1_LPI2016-Cover-Daftar-Isi-Prakata.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Tinjauan Umum",
-// 				"link": "2_LPI2016-Tinjauan-Umum.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bagian I",
-// 				"link": "3_LPI2016-Bagian-I.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bagian II",
-// 				"link": "4_LPI2016-Bagian-II.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bagian III",
-// 				"link": "5_LPI2016-Bagian-III.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bagian IV",
-// 				"link": "6_LPI2016-Bagian-IV.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Lampiran",
-// 				"link": "7_LPI2016-Lampiran.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Versi Lengkap",
-// 				"link": "LPI2016-web.pdf",
-// 				"desc": ""
-// 			}
-// 		]
-// 	},
-// 	"2017": {
-//         "cover" : "cover2017.png",
-//         "title": "Mengoptimalkan Momentum, Memperkuat Struktur",
-//         "prakata" : "Ketika saya mulai memimpin Bank Indonesia pada 2013, perekonomian sedang menghadapi "+
-//                     "meningkatnya ketidakpastian pasar keuangan global terkait perubahan arah kebijakan "+
-//                     "moneter AS atau yang dikenal sebagai taper tantrum. Kondisi tersebut diperberat oleh "+
-//                     "perekonomian domestik yang sedang mengalami ketidakseimbangan baik internal maupun eksternal. "+
-//                     "Hal tersebut antara lain tercermin pada tekanan inflasi yang meningkat, pertumbuhan ekonomi "+
-//                     "yang melambat, defisit transaksi berjalan yang melebar, serta nilai tukar yang melemah cukup tajam."+
-//                     "Pada tahun-tahun berikutnya, perubahan arah kebijakan moneter AS terus berlanjut dengan kenaikan "+
-//                     "Fed Funds Rate dan pengurangan neraca bank sentral. Perkembangan tersebut belum ada presedennya "+
-//                     "yang dapat menjadi kompas dalam menentukan respons kebijakan yang mampu memitigasi rambatan "+
-//                     "risiko dan sekaligus mendorong perbaikan ekonomi domestik. Melihat kembali pada tahun-tahun itu, "+
-//                     "kita patut bersyukur bahwa pilihan fokus kebijakan untuk stabilisasi perekonomian yang ditempuh "+
-//                     "secara konsisten mampu membawa perekonomian Indonesia secara berangsur terus membaik. ",
-// 		"content": [{
-// 				"title": "Cover",
-// 				"link": "1_LPI2017_COVER.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Tinjauan Umum",
-// 				"link": "2_LPI2017_TINJAUAN-UMUM.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 1",
-// 				"link": "3_LPI2017_BAB1.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 2",
-// 				"link": "4_LPI2017_BAB2.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 3",
-// 				"link": "5_LPI2017_BAB3.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 4",
-// 				"link": "6_LPI2017_BAB4.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 5",
-// 				"link": "7_LPI2017_BAB5.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 6",
-// 				"link": "8_LPI2017_BAB6.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 7",
-// 				"link": "9_LPI2017_BAB7.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 8",
-// 				"link": "10_LPI2017_BAB8.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 9",
-// 				"link": "11_LPI2017_BAB9.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 10",
-// 				"link": "12_LPI2017_BAB10.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Lampiran",
-// 				"link": "13_LPI2017_LAMPIRAN.pdf",
-// 				"desc": ""
-// 			}
-// 		]
-// 	},
-// 	"2018": {
-//         "cover" : "cover2018.jpg",
-//         "title": "Sinergi untuk ketahanan dan pertumbuhan",
-//         "prakata" : "Ketika saya mulai memimpin Bank Indonesia pada 2013, perekonomian sedang menghadapi "+
-//                     "meningkatnya ketidakpastian pasar keuangan global terkait perubahan arah kebijakan "+
-//                     "moneter AS atau yang dikenal sebagai taper tantrum. Kondisi tersebut diperberat oleh "+
-//                     "perekonomian domestik yang sedang mengalami ketidakseimbangan baik internal maupun eksternal. "+
-//                     "Hal tersebut antara lain tercermin pada tekanan inflasi yang meningkat, pertumbuhan ekonomi "+
-//                     "yang melambat, defisit transaksi berjalan yang melebar, serta nilai tukar yang melemah cukup tajam."+
-//                     "Pada tahun-tahun berikutnya, perubahan arah kebijakan moneter AS terus berlanjut dengan kenaikan "+
-//                     "Fed Funds Rate dan pengurangan neraca bank sentral. Perkembangan tersebut belum ada presedennya "+
-//                     "yang dapat menjadi kompas dalam menentukan respons kebijakan yang mampu memitigasi rambatan "+
-//                     "risiko dan sekaligus mendorong perbaikan ekonomi domestik. Melihat kembali pada tahun-tahun itu, "+
-//                     "kita patut bersyukur bahwa pilihan fokus kebijakan untuk stabilisasi perekonomian yang ditempuh "+
-//                     "secara konsisten mampu membawa perekonomian Indonesia secara berangsur terus membaik. ",
-// 		"content": [{
-// 				"title": "Cover",
-// 				"link": "1_LPI2018_COVER-DAFTARISI-PRAKATA.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Tinjauan Umum",
-// 				"link": "2_LPI2018_TINJAUAN-UMUM.pdf",
-// 				"desc": ""
-// 			},
-// 			{
-// 				"title": "Bab 1",
-// 				"link": "3_LPI2018_BAB1.pdf",
-// 				"desc": ""
-// 			}
-// 		]
-// 	}
-// }
-
-// var listLPI = ["2018","2017","2016"];
+  }
+};
