@@ -27,6 +27,40 @@ const report_2021_ID_bab6 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI
 const report_2021_ID_appendices = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_lampiran.pdf";
 const report_2021_ID_full = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_FULL.pdf";
 
+const report_2021_EN_prakata = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_EN_forewood.pdf";
+const report_2021_EN_overview = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_EN_overview.pdf";
+const report_2021_EN_bab1 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_EN_BAB1.pdf";
+const report_2021_EN_bab2 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_EN_BAB2.pdf";
+const report_2021_EN_bab3 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_EN_BAB3.pdf";
+const report_2021_EN_bab4 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_EN_BAB4.pdf";
+const report_2021_EN_bab5 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_EN_BAB5.pdf";
+const report_2021_EN_bab6 = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_EN_BAB6.pdf";
+const report_2021_EN_appendices = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_EN_lampiran.pdf";
+const report_2021_EN_full = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_EN_FULL.pdf";
+
+const report_2022_ID_prakata = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_forewood.pdf#page=16";
+const report_2022_ID_overview = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_overview.pdf";
+const report_2022_ID_bab1 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_BAB1.pdf";
+const report_2022_ID_bab2 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_BAB2.pdf";
+const report_2022_ID_bab3 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_BAB3.pdf";
+const report_2022_ID_bab4 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_BAB4.pdf";
+const report_2022_ID_bab5 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_BAB5.pdf";
+const report_2022_ID_bab6 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_BAB6.pdf";
+const report_2022_ID_bab7 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_BAB7.pdf";
+const report_2022_ID_appendices = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_lampiran.pdf";
+const report_2022_ID_full = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_ID_FULL.pdf";
+
+const report_2022_EN_prakata = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_forewood.pdf#page=16";
+const report_2022_EN_overview = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_overview.pdf";
+const report_2022_EN_bab1 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_BAB1.pdf";
+const report_2022_EN_bab2 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_BAB2.pdf";
+const report_2022_EN_bab3 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_BAB3.pdf";
+const report_2022_EN_bab4 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_BAB4.pdf";
+const report_2022_EN_bab5 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_BAB5.pdf";
+const report_2022_EN_bab6 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_BAB6.pdf";
+const report_2022_EN_bab7 = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_BAB7.pdf";
+const report_2022_EN_appendices = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_lampiran.pdf";
+const report_2022_EN_full = "https://storage.googleapis.com/bi-lpi-2020/2022/LPI_2022_EN_FULL.pdf";
 
 var pdfLink = {
 	"2015": {
@@ -1140,69 +1174,219 @@ var pdfLink = {
 		"EN" : {
 			"cover" : 	"cover2021.jpg",
 			"title" : 	"Economic Report on Indonesia 2021",
-			"prakata" : "Coming Soon",
-      "prakataLink": comingSoonENLink,
+			"prakata" : "Praise be to Allah. Let us give thanks before the Almighty God, for by His grace, Bank Indonesia has been able to continue the tradition of publication of reports for transparency and accountability at the start of the year, following the Bank Indonesia Annual Meeting. In January 2022, Bank Indonesia simultaneously published three reports in support of transparency and accountability: the Economic Report on Indonesia 2021; the Sharia Economy and Finance Report 2021; and the Bank Indonesia Annual Report 2021, following the Bank Indonesia Annual Meeting on 24 November 2021. The publication of these three reports represents a fulfilment of our steadfast commitment to strengthening the transparency and accountability of Bank Indonesia as mandated in the Bank Indonesia Act. " + 
+                  "From our standpoint, despite inequity in the gains achieved, the global economy saw further improvement in 2021. Economic recovery progressed more rapidly in advanced economies than in emerging markets and developing economies due to differences between individual nations in vaccination rates and capacity for policy stimulus. In 2021, global economic recovery plateaued temporarily in response to the spread of the Covid-19 Delta variant in the second quarter. The Delta variant, which is extremely contagious and causes more severe illness than other variants, had a significant impact on public health, human lives and the world economy. Given the wider spread of the Covid-19 Delta variant, uncertainties persisted in global financial markets amid market anticipation of a tapering policy by the US Fed and fears of prolonged inflationary pressure.",
+      "prakataLink": report_2021_EN_prakata,
 			"content": [
 				{
 					"title": 	"Overview",
-					"link": 	comingSoonENLink,
-					"desc"  : "Coming Soon",
+					"link": 	report_2021_EN_overview,
+					"desc"  : "In 2021, the global economy recorded further improvements despite an uneven performance across countries and lingering uncertainty on financial markets. Indonesia's economic recovery also progressed with prudently managed stability, despite the interruption in the third quarter of 2021 caused by the rapid spread of the Delta variant. Close policy synergy and the economy's performance in 2021 set the stage for greater optimism regarding a more robust recovery in the Indonesian economy in 2022. Driving this result was one policy prerequisite, namely accelerating the rate of vaccinations and tackling Covid-19, which formed the basis for re-opening priority sectors of the economy. Five other policy responses addressed certain necessary conditions, as discussed below. In a continuation of these policies, the Bank Indonesia policy mix in 2022 will form a key part of the national economic policy for an accelerated recovery and the maintenance of economic stability. This will be expedited by structural reforms involving both the real sector and more rapid development of the national digital economy and finance, alongside the transformation of Bank Indonesia policy mix, to reinforce ongoing efforts for building an Advanced Indonesia (Indonesia Maju).",
           "class" : ""
 				},
 				{
-					"title": 	"Chapter 1",
-					"link": 	comingSoonENLink,
-					"desc"  : "Coming Soon",
+					"title": 	"Chapter 1 Global Economic Performance and Outlook: Divergent Recovery, Persistent Financial Market Uncertainty",
+					"link": 	report_2021_EN_bab1,
+					"desc"  : "Global economic improvements continued in 2021, despite divergent and asynchronous economic recoveries between Advanced Economies (AEs) and Emerging Markets and Developing Economies (EMDEs), owing to different access to vaccines and policy stimuli across jurisdictions. At the same time, global financial market uncertainty persisted in response to emerging risks, including transmission of the Delta variant; market anticipation of tapering by the Fed; and concerns stoked by lingering inflationary pressures. The Covid-19 pandemic has brought at least seven important aspects to the forefront, as discussed below. These demand vigilance and must be anticipated properly to support the global economic recovery, which is expected to continue in 2022. International policy coordination, including Indonesia's G20 Presidency agenda in 2022, aims to strengthen the ongoing global economic recovery.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Chapter 2",
-					"link": 	comingSoonENLink,
-					"desc"  : "Coming Soon",
+					"title": 	"Chapter 2 National Economic Performance and Outlook: The Recovery Process Continues, Stability is Maintained",
+					"link": 	report_2021_EN_bab2,
+					"desc"  : "The 2021 economic recovery in Indonesia was largely driven by Covid-19 pandemic developments. Ongoing economic improvements since the first quarter of 2021 have endured, yet have been restrained by the impact of the Delta outbreak in the third quarter of 2021. Overall, Indonesia's economy is projected to continue improving in 2021 before accelerating in 2022, accompanied by a stable exchange rate and controlled inflation. Stronger economic conditions will be supported by increasing factor mobility as Covid-19 transmission is brought under control in line with a faster vaccination rollout. The broader reopening of economic sectors, along with policy stimuli and solid export performance support such projections. To that end, national economic policy synergy and innovation must be strengthened to bolster the ongoing economic recovery.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Chapter 3",
-					"link": 	comingSoonENLink,
-					"desc"  : "Coming Soon",
+					"title": 	"Chapter 3 Bank Indonesia Policy Mix 2021: Encouraging National Economic Recovery, Maintaining Stability",
+					"link": 	report_2021_EN_bab3,
+					"desc"  : "National policy synergy was strengthened in 2021 to maintain stability and revive the national economy. Strong economic policy coordination between the Government, Financial System Stability Committee and Bank Indonesia helped the economic recovery, while maintaining macroeconomic and financial system stability. Fiscal and monetary policy cooperation was strengthened through Bank Indonesia's participation in funding the State Revenue and Expenditure Budget (APBN) in accordance with Act No. 2 of 2020. Furthermore, Bank Indonesia also oriented the full panoply of monetary, macroprudential and payment system policy mix instruments towards supporting the national economic recovery in close coordination with the Government and Financial System Stability Committee.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Chapter 4",
-					"link": 	comingSoonENLink,
-					"desc"  : "Coming Soon",
+					"title": 	"Chapter 4 Rise and be Optimistic: Synergy and Innovation for Economic Recovery",
+					"link": 	report_2021_EN_bab4,
+					"desc"  : "Effective policy synergy and improving economic performance in 2021 are good reasons to be more optimistic about an acceleration of Indonesia's economic recovery in 2022. Efforts to promote economic recovery will continue to be based on a framework of policy synergies so that the economy returns to its long-term trajectory. For 2022, Indonesia's economic prospects will continue to improve in line with stronger expected domestic demand and a pick-up in the global economy. Economic stability is predicted to be maintained as the economy recovers. This positive outlook is underpinned by synergy and innovation to maintain momentum and create optimism for the recovery of the national economy. Synergies among Bank Indonesia and the Central and Regional Governments, the Financial System Stability Committee (KSSK), the banking sector and the business world will continue to be strengthened to improve performance of the national economy in a sustainable manner. Furthermore, policy mix innovations are constantly aligned with developments globally, domestically and in regard to fiscal conditions in order to support continued structural reforms of the national economy so that the economy continues to improve over the medium term and is back on track towards the realisation of an Advanced Indonesia.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Chapter 5",
-					"link": 	comingSoonENLink,
-					"desc"  : "Coming Soon",
+					"title": 	"Chapter 5 Bank Indonesia Policy Mix Direction for 2022: Encouraging Acceleration of Economic Recovery, Maintaining Stability",
+					"link": 	report_2021_EN_bab5,
+					"desc"  : "Bank Indonesia's policy mix in 2022 will synergize and help guide national economic policy toward accelerating recovery and maintaining economic stability. The policy mix is based upon the global economic outlook and gives consideration to issues that are on the international policy coordination agenda in the Indonesian Presidency at the G20 in 2022. In this regard, implementation entails five policy instruments, namely: monetary policy; macroprudential policy; digitalization of the payment system; deepening of the money market; and creating an inclusive and green economy. These all require accurate analysis, good planning and effective communication. Beginning with monetary policy, external risks are critical, most importantly the risk of increasing global financial market instability pressures brought on by the normalization of monetary policy by the Fed and a number of Advanced Economies. In light of this possibility, monetary policy in 2022 will be directed more towards maintaining stability (pro-stability), in terms of achieving the inflation target; exchange rate stability; and macroeconomic and financial system stability. At the same time, macroprudential policies, digitalization of the payment system, deepening of the money market and creation of an inclusive and green economy will continue to be directed towards accelerating Indonesia's economic recovery (pro-growth). The direction of Bank Indonesia's policies in synergy with the national economic policy mix will help bring Indonesia's economic growth back to its medium-term trajectory, aiming at creating an Advanced Indonesia.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Chapter 6",
-					"link": 	comingSoonENLink,
-					"desc"  : "Coming Soon",
+					"title": 	"Chapter 6 Transformation of The Policy Mix and Acceleration of The Digital Economy and Finance",
+					"link": 	report_2021_EN_bab6,
+					"desc"  : "The transformation of Bank Indonesia's policy mix is a culmination of efforts to become a leading digital central bank that contributes significantly to the national economy and is the best among emerging market countries to create an Advanced Indonesia. Bank Indonesia has sharpened its strategic direction through a series of transformations of the main and supporting policy mix, including strengthening the monetary operating framework and deepening the financial markets. Entering the new era of economic and financial digitalization, Bank Indonesia is also moving quickly to accelerate the realization of an inclusive and efficient digital economy. Based on the Indonesian Payment System Blueprint (BSPI) 2025, Bank Indonesia issued a national payment system reform policy package in 2021, which comprises regulatory reform; development and implementation of BI-FAST as retail payment system infrastructure; and development and expansion of the national payment system QRIS (QR Indonesian Standard) and SNAP (National Standard for Open API Payments). Bank Indonesia is also encouraging the strengthening of MSMEs through a comprehensive and inclusive digital transformation carried out along the value chain to support the creation of an integrated digital ecosystem and in line with the pillars of Bank Indonesia's MSME development policy, namely corporatization, capacity and financing.",
           "class" : 	"indent"
 				},
 				{
 					"title": 	"Appendices",
-					"link": 	comingSoonENLink,
+					"link": 	report_2021_EN_appendices,
 					"desc": 	"",
 					"class" : 	""
 				},
 				{
 					"title": 	"Economic Report on Indonesia 2021",
-					"link": 	comingSoonENLink,
+					"link": 	report_2021_EN_full,
 					"desc": 	"",
 					"class" : 	"indent"
 				}
 			]
 		}
-	}
+	},
+  "2022": {
+    "ID" : {
+			"cover" : "cover2022.jpg",
+			"title": 	"SINERGI DAN INOVASI MEMPERKUAT KETAHANAN DAN KEBANGKITAN MENUJU INDONESIA MAJU",
+			"prakata" : `Alhamdulillah, puji syukur kami panjatkan ke hadirat Allah <i>Subhanahu wa Ta'ala</i> (SWT), \n
+                  Tuhan Yang Maha Kuasa, karena atas Rahmat-Nya Bank Indonesia dapat kembali mengukuhkan tradisi 
+                  publikasi laporan transparansi dan akuntabilitas pada awal tahun. 
+                  Pada Januari 2023, Bank Indonesia memublikasikan Laporan Perekonomian Indonesia (LPI) 2022 
+                  sebagai wujud komitmen tinggi kami untuk memperkuat transparansi dan akuntabilitas Bank Indonesia 
+                  seperti yang diamanatkan dalam UU No. 23 Tahun 1999 tentang Bank Indonesia sebagaimana telah beberapa kali diubah 
+                  terakhir dengan UU No. 4 Tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan. 
+                  Pada kesempatan yang sama, Bank Indonesia juga meluncurkan Kajian Ekonomi dan Keuangan Syariah (KEKSI) 2022 
+                  yang merupakan bagian dari dukungan nyata Bank Indonesia dalam pengembangan ekonomi dan keuangan syariah. 
+                  Kedua publikasi ini sekaligus juga merupakan wujud komitmen kami untuk menjadi bank sentral kredibel yang 
+                  didukung tata kelola yang baik.`,
+			"prakataLink" : report_2022_EN_prakata,
+			"content": [
+        {
+					"title": 	"Tinjauan Umum Sinergi dan Inovasi Memperkuat Ketahanan dan Kebangkitan Menuju Indonesia Maju",
+					"link": 	report_2022_ID_overview,
+          "desc"  : "Perekonomian global tahun 2022 kembali memburuk dipicu oleh ketegangan geopolitik dunia, yang berdampak pada meningkatnya risiko resesi dan inflasi yang tinggi. Sinergi dan inovasi kebijakan Bank Indonesia dengan Pemerintah dan Komite Stabilitas Sistem Keuangan dapat menjaga ketahanan ekonomi dari risiko global tersebut dan terus mendukung keberlanjutan pemulihan ekonomi nasional tahun 2022. Ke depan, bauran kebijakan Bank Indonesia dan sinergi yang erat dengan kebijakan ekonomi nasional terus diperkuat guna terus mendukung ketahanan ekonomi serta mempercepat pemulihan dan kebangkitan perekonomian. Prospek perekonomian Indonesia diprakirakan terus membaik dengan didukung oleh struktur yang berdaya tahan dalam jangka menengah sehingga dapat menopang transformasi Indonesia menjadi negara maju.",
+					"class" : ""
+				},
+				{
+					"title": 	"Bab 1 Kinerja dan Prospek Ekonomi Global: Memburuk dengan Risiko Resflasi",
+					"link": 	report_2022_ID_bab1,
+					"desc"  : "Ketegangan geopolitik dunia memperburuk fragmentasi dan prospek ekonomi serta meningkatkan ketidakpastian pasar keuangan global. Lima tantangan mengemuka yang secara umum telah menurunkan prospek perekonomian global, termasuk munculnya risiko resesi dan inflasi tinggi bila fragmentasi tersebut terus belanjut. Berbagai tantangan tersebut menuntut penguatan kerja sama internasional baik skala regional maupun multilateral sehingga dapat memitigasi risiko dengan segera dan kembali memperkuat pemulihan ekonomi global",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 2 Kinerja dan Prospek Ekonomi Nasional: Optimis dan Waspada",
+					"link": 	report_2022_ID_bab2,
+					"desc"  : "Sinergi kebijakan Bank Indonesia, Pemerintah, dan Komite Stabilitas Sistem Keuangan (KSSK) dapat menopang berlanjutnya proses pemulihan perekonomian nasional pada 2022, di tengah kondisi perekonomian global yang menurun. Pertumbuhan ekonomi pada 2022 diprakirakan bias ke atas dalam kisaran proyeksi Bank Indonesia pada 4,5-5,3% serta didukung stabilitas moneter dan stabilitas sistem keuangan yang tetap terjaga. Pertumbuhan ekonomi pada 2023 diprakirakan tetap kuat, meskipun sedikit melambat ke titik tengah kisaran 4,5-5,3% sejalan penurunan prospek pertumbuhan ekonomi dunia, sebelum kemudian meningkat kembali menjadi 4,7-5,5% pada 2024.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 3 Bauran Kebijakan Bank Indonesia Tahun 2022: Menjaga Stabilitas dan Momentum Pemulihan Ekonomi Nasional",
+					"link": 	report_2022_ID_bab3,
+					"desc"  : "Bank Indonesia menempuh bauran kebijakan dan memperkuat sinergi kebijakan dengan Pemerintah dan Komite Stabilitas Sistem Keuangan (KSSK) dalam kerangka bauran kebijakan nasional untuk mendorong akselerasi pemulihan ekonomi sekaligus menjaga stabilitas. Dalam kaitan ini, kebijakan moneter diarahkan untuk menjaga stabilitas (<i>pro-stability</i>), sedangkan empat instrumen lainnya, yakni kebijakan makroprudensial, digitalisasi sistem pembayaran, pendalaman pasar uang, serta ekonomi-keuangan inklusif dan hijau diarahkan untuk mengakselerasi pemulihan ekonomi nasional (<i>pro-growth</i>). Sinergi kebijakan tersebut dalam perkembangannnya mampu mendorong berlanjutnya momentum pertumbuhan dan menjaga stabilitas perekonomian Indonesia di tengah perkembangan ekonomi global yang kurang menguntungkan.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 4 Sinergi dan Inovasi Bauran Kebijakan Ekonomi Nasional: Memperkuat Ketahanan, Mendorong Kebangkitan",
+					"link": 	report_2022_ID_bab4,
+					"desc"  : "Sinergi dan inovasi bauran kebijakan makroekonomi dan stabilitas sistem keuangan terus ditingkatkan untuk memperkuat ketahanan, momentum pemulihan, dan kebangkitan perekonomian nasional. Koordinasi erat kebijakan fiskal Pemerintah dan kebijakan Bank Indonesia diperlukan untuk memastikan inflasi dapat segera kembali ke sasaran, nilai tukar Rupiah stabil, defisit APBN terkendali, dan stabilitas moneter tetap terjaga. Kebijakan transformasi sektor riil dan reformasi struktural terus diperkuat untuk meningkatkan kapasitas perekonomian dan mendukung kesinambungan pertumbuhan ekonomi dalam jangka menengah menuju Indonesia Maju.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 5 Arah Bauran Kebijakan Bank Indonesia Tahun 2023: Menjaga Stabilitas, Mendorong Akselerasi Pemulihan",
+					"link": 	report_2022_ID_bab5,
+					"desc"  : "Bauran kebijakan Bank Indonesia pada tahun 2023 terus diarahkan untuk memperkuat ketahanan, pemulihan, dan kebangkitan perekonomian dalam sinergi yang erat dengan kebijakan ekonomi nasional. Kebijakan moneter Bank Indonesia akan terus diarahkan menjaga stabilitas (<i>pro-stability</i>), sementara kebijakan makroprudensial, digitalisasi sistem pembayaran, pendalaman pasar uang, serta ekonomi-keuangan inklusif dan hijau akan terus diarahkan untuk mengakselerasi pemulihan ekonomi nasional (<i>pro-growth</i>). Sinergi bauran kebijakan Bank Indonesia dan kebijakan ekonomi nasional akan mendorong pertumbuhan ekonomi Indonesia berada di lintasan jangka menengah menuju Indonesia Maju.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 6 Presidensi G20 Indonesia: Sinergi Internasional Mendorong Pemulihan Ekonomi Global",
+					"link": 	report_2022_ID_bab6,
+					"desc"  : "Upaya untuk mendorong pemulihan ekonomi global yang berimbang di tengah berbagai tantangan memerlukan sinergi erat di tingkat global sehingga Presidensi G20 Indonesia 2022 mengangkat tema &#8220;<i>Recover Together, Recover Stronger</i>&#8221;. Presidensi G20 Indonesia memiliki 6 (enam) agenda utama yang menjadi fokus pembahasan di jalur keuangan, yaitu terkait kebijakan <i>exit strategy</i> pascapandemi, mengatasi <i>scarring effect</i> dari pandemi, inovasi sistem pembayaran di era digital, mendorong keuangan berkelanjutan, meningkatkan inklusi keuangan, serta perpajakan internasional. Presidensi G20 Indonesia telah berhasil mengeluarkan berbagai kesepakatan dan rekomendasi yang akan menjadi acuan perumusan kebijakan ke depan.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 7 Proyek Garuda: Menavigasi Arsitektur Rupiah Digital",
+					"link": 	report_2022_ID_bab7,
+					"desc"  : "Dinamika perkembangan uang pada era digital beserta tantangannya mendorong Bank Indonesia meninjau kembali kebijakannya. Rupiah Digital sebagai bentuk pengembangan CBDC Indonesia menjadi jalan keluar bagi Bank Indonesia untuk tetap dapat memenuhi misi kebijakan publiknya pada era digital. Peluncuran “Proyek Garuda” oleh Bank Indonesia menjadi proyek yang memayungi berbagai inisiatif eksplorasi atas pilihan-pilihan desain arsitektur Rupiah Digital. Mempertimbangkan bahwa Proyek Garuda merupakan sebuah inisiatif berskala nasional maka sinergi dengan berbagai pemangku kepentingan akan terus ditempuh guna memperkuat efektivitas kebijakan.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Lampiran",
+					"link": 	report_2022_ID_appendices,
+					"desc": 	"",
+					"class" : 	""
+				},
+				{
+					"title": 	"Laporan Perekonomian Indonesia 2022",
+					"link": 	report_2022_ID_full,
+					"desc": 	"",
+					"class" : 	"indent"
+				}
+      ]
+		},
+    "EN" : {
+			"cover" : "cover2022.jpg",
+			"title": 	"SYNERGY AND INNOVATION STRENGTHENING RESILIENCE AND REVIVAL TOWARDS ADVANCED INDONESIA",
+			"prakata" : `Praise be to Allah. Let us give thanks before the One and Almighty God for by His grace, Bank Indonesia has once again been able to uphold and strengthen the tradition for publication of reports for transparency and accountability at the start of the year. In January 2023, Bank Indonesia published the Economic Report on Indonesia 2022 as a product of our steadfast commitment for strengthening the transparency
+                  and accountability of Bank Indonesia as mandated in Act No. 23 of 1999 concerning Bank Indonesia as last amended by Act No. 4 of 2023 concerning Development and Strengthening of the Financial Sector. On the same occasion, Bank Indonesia also launched the Sharia Economics and Finance Study 2022, which represents part of the tangible support provided by Bank Indonesia to the development of the sharia economy and finance. These two publications also represent the product of our commitment to be a central bank of utmost credibility, supported by good governance.`,
+			"prakataLink" : report_2022_EN_prakata,
+			"content": [
+        {
+					"title": 	"Overview",
+					"link": 	report_2022_EN_overview,
+          "desc"  : "The global economy experienced another downturn in 2022, triggered by global geopolitical tensions that increased recession risk and led to high inflation. Policy synergy and innovation between Bank Indonesia and the Government, under the auspices of the Financial System Stability Committee (KSSK), effectively maintained economic resilience against the global turmoil and sustained the momentum of national economic recovery in 2022. Moving forward, the Bank Indonesia policy mix and close synergy with national economic policy will continue to be strengthened, thus bolstering economic resilience and accelerating the economic recovery and revival. A promising national economic outlook is projected for Indonesia, supported by an economic structure that is resilient in the medium-long term, thereby strengthening Indonesia's transformation towards an advanced economy.",
+					"class" : ""
+				},
+				{
+					"title": 	"Chapter 1 Global Economy: Worsening with Recession/Inflation Risk",
+					"link": 	report_2022_EN_bab1,
+					"desc"  : "Global geopolitical tensions exacerbated economic fragmentation in 2022, dimming economic prospects and leading to greater uncertainty in global financial markets. Five main challenges emerged which have clouded the outlook for the global economy, including the risk of recession and high inflation, if such fragmentation continues. These various challenges require stronger international cooperation both on a regional and multilateral scale so that the risks can be immediately mitigated in order to help hasten global economic recovery.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 2 Domestic Economy: Cautiously Optimistic",
+					"link": 	report_2022_EN_bab2,
+					"desc"  : "The policy synergy between Bank Indonesia, the Government and the Financial System Stability Committee (KSSK) supported the continuation of the domestic economic recovery process in 2022, amid weakening global economic conditions. Economic growth in 2022 is predicted to have an upwards bias within the range of Bank Indonesia's projection of 4.5-5.3% and be supported by both monetary and financial system stability. Economic growth is predicted to remain strong in 2023, although it will slow slightly to the midpoint of the 4.5-5.3% range in line with the dimmer prospects for global economic growth, before increasing again to 4.7-5.5% in 2024.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 3 Bank Indonesia Policy Mix in 2022: Maintaining Stability and Economic Recovery Momentum",
+					"link": 	report_2022_EN_bab3,
+					"desc"  : "Bank Indonesia used a mix of its policy instruments--and strengthened policy synergy with the Government and Financial System Stability Committee (KSSK) within the national policy framework--to accelerate economic recovery and maintain stability. In this regard, monetary policy was oriented towards maintaining stability (pro-stability), while the four other instruments (namely macroprudential policy; payment system digitalisation; money market development; and the green and inclusive economy and finance) were oriented towards accelerating economic recovery (pro-growth). Such policy synergy successfully maintained growth momentum and economic stability in Indonesia despite global economic turmoil.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 4 Synergy and Innovation of the National Policy Mix: Strengthening Resilience, Encouraging Revival",
+					"link": 	report_2022_EN_bab4,
+					"desc"  : "The synergy and innovation of the macroeconomic policy mix and financial system stability are continuously enhanced to strengthen resilience, recovery momentum and revival of the economy. Close coordination between the Government's fiscal policy and Bank Indonesia's policies is needed to ensure that inflation can quickly return to its targeted level; the Rupiah exchange rate is stable; the State Budget deficit is under control; and monetary stability is maintained. Real sector transformation policies and structural reforms continue to be strengthened to increase economic capacity and support sustainable economic growth in the medium term towards achieving Indonesia Maju.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 5 Bank Indonesia Policy Mix Direction in 2023: Maintaining Stability, Accelerating Economic Recovery",
+					"link": 	report_2022_EN_bab5,
+					"desc"  : "The Bank Indonesia policy mix in 2023 will remain oriented towards strengthening economic resilience, recovery and revival in close synergy with national economic policy. BI monetary policy in 2023 will remain directed towards maintaining stability (pro-stability), while macroprudential policy, payment system digitalisation, money market development as well as the inclusive and green economy and finance will remain directed towards accelerating economic recovery (pro-growth). This BI policy mix synergized with national economic policy will stimulate economic growth on a medium-term path towards Indonesia Maju.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 6 Indonesia's G20 Presidency: Global Synergy Drives Economic Recovery",
+					"link": 	report_2022_EN_bab6,
+					"desc"  : "One important global agenda item carried out in 2022 to promote global economic recovery, is Indonesia's 2022 G20 Presidency, which has the theme &ldquo;Recover Together, Recover Stronger&rdquo;. Various agendas were discussed intensively in the Finance Track and the Sherpa Track. The implementation of Indonesia's G20 Presidency proceeded smoothly and resulted in joint communiques from all G20 members, even though, at the same time, geopolitical tensions were still high. The successful implementation of Indonesia's G20 Presidency owes much to the strategic role of strong synergy, both among stakeholders in Indonesia and coordination with member countries, in achieving the same goal of accelerating global economic recovery.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Chapter 7 The Project Garuda: Navigating the Digital Rupiah Architecture",
+					"link": 	report_2022_EN_bab7,
+					"desc"  : "The dynamics of money development in the digital era and its challenges have prompted Bank Indonesia to review its policies in this area. A Digital Rupiah is a way to develop Indonesia's CBDC while fulfilling Bank Indonesia's public policy mission in the digital era. The launch of the &ldquo;Project Garuda&rdquo; by Bank Indonesia is a project that covers various initiatives to explore architectural design options for the Digital Rupiah. Considering that the Project Garuda is an initiative on a national scale, synergies with various stakeholders will continue to be pursued to strengthen policy effectiveness.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Appendices",
+					"link": 	report_2022_EN_appendices,
+					"desc": 	"",
+					"class" : 	""
+				},
+				{
+					"title": 	"Indonesia Economic Report 2022",
+					"link": 	report_2022_EN_full,
+					"desc": 	"",
+					"class" : 	"indent"
+				}
+      ]
+		},
+  }
 }
 
-var listLPI = ["2021", "2020","2019","2018","2017","2016","2015"];
+var listLPI = ["2022", "2021", "2020","2019","2018","2017","2016","2015"];
 
 var GLOBAL_MESSAGE = {
   "ID" : {

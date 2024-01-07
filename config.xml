@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.bi.lpi20" ios-CFBundleVersion="3.2" version="3.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-<!-- <widget id="com.backstage.biProject" ios-CFBundleVersion="3.2" version="3.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> -->
+  <widget id="com.bi.lpi20" ios-CFBundleVersion="4.5" version="4.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <!-- <widget id="com.backstage.biProject" ios-CFBundleVersion="4.3.1" version="4.3.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> -->
     <name>Laporan Perekonomian Indonesia</name>
     <description>
         Aplikasi Laporan Perekonomian Indonesia oleh Bank Indonesia
@@ -30,7 +30,7 @@
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="android-minSdkVersion" value="28" />
-    <preference name="android-targetSdkVersion" value="30" />
+    <preference name="android-targetSdkVersion" value="31" />
     <preference name="android-installLocation" value="auto" />
     <preference name="BackupWebStorage" value="local" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
@@ -59,14 +59,14 @@
         <icon density="xhdpi" src="res/icon/android/Icon-96-xhdpi.png" />
         <icon density="xxhdpi" src="res/icon/android/Icon-144-xxhdpi.png" />
         <icon density="xxxhdpi" src="res/icon/android/Icon-192-xxxhdpi.png" />
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-HDPI.png" density="land-hdpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-LDPI.png" density="land-ldpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-MDPI.png" density="land-mdpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-XHDPI.png" density="land-xhdpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-HDPI.png" density="port-hdpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-LDPI.png" density="port-ldpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-MDPI.png" density="port-mdpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-XHDPI.png" density="port-xhdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-HDPI-2022.png" density="land-hdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-LDPI-2022.png" density="land-ldpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-MDPI-2022.png" density="land-mdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-XHDPI-2022.png" density="land-xhdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-HDPI-2022.png" density="port-hdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-LDPI-2022.png" density="port-ldpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-MDPI-2022.png" density="port-mdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-XHDPI-2022.png" density="port-xhdpi"/>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -98,25 +98,24 @@
         <icon height="88" src="res/icon/ios/Icon-88.png" width="88" />
         <icon height="167" src="res/icon/ios/Icon-167.png" width="167" />
         <icon height="1024" src="res/icon/ios/Icon-1024.png" width="1024" />
-        <splash height="480" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-320-480.png" width="320" />
-        <splash height="960" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-640-960.png" width="640" />
-        <splash height="1024" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-768-1024.png" width="768" />
-        <splash height="2048" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1536-2048.png" width="1536" />
-        <splash height="1136" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-640-1136.png" width="640" />
-        <splash height="1334" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-750-1334.png" width="750" />
-        <splash height="2208" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1242-2208.png" width="1242" />
-        <splash height="2436" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1125-2436.png" width="1125" />
-        <splash height="2688" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1242-2688.png" width="1242" />
-        <splash height="1792" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-828-1792.png" width="828" />
-        <splash height="1004" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-768-1004.png" width="768" />
-        <splash height="2008" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1536-2008.png" width="1536" />
-        
-        <splash height="768" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-1024-768.png" width="1024" />
-        <splash height="1536" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-2048-1536.png" width="2048" />
-        <splash height="1242" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-2208-1242.png" width="2208" />
-        <splash height="1125" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-2436-1125.png" width="2436" />
-        <splash height="1242" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-1242-2688.png" width="2688" />
-        <splash height="828" src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-1792-828.png" width="1792" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-320-480.png" width="320" height="480" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-640-960.png" width="640" height="960" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-640-1136.png" width="640" height="1136" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-768-1004.png" width="768" height="1004" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-768-1024.png" width="768" height="1024" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-750-1334.png" width="750" height="1334" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-828-1792.png" width="828" height="1792" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1242-2208.png" width="1242" height="2208" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1125-2436.png" width="1125" height="2436" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1242-2688.png" width="1242" height="2688" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1536-2008.png" width="1536" height="2008" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1536-2048.png" width="1536" height="2048" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-1024-768.png" width="1024" height="768" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-2688-1242.png" width="2688" height="1242" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-1792-828.png" width="1792" height="828" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-2048-1536.png" width="2048" height="1536" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-2208-1242.png" width="2208" height="1242" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-2436-1125.png" width="2436" height="1125" />
     </platform>
     <feature name="CDVWKWebViewEngine">
         <param name="ios-package" value="CDVWKWebViewEngine" />
