@@ -59,14 +59,14 @@
         <icon density="xhdpi" src="res/icon/android/Icon-96-xhdpi.png" />
         <icon density="xxhdpi" src="res/icon/android/Icon-144-xxhdpi.png" />
         <icon density="xxxhdpi" src="res/icon/android/Icon-192-xxxhdpi.png" />
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-HDPI-2022.png" density="land-hdpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-LDPI-2022.png" density="land-ldpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-MDPI-2022.png" density="land-mdpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-XHDPI-2022.png" density="land-xhdpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-HDPI-2022.png" density="port-hdpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-LDPI-2022.png" density="port-ldpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-MDPI-2022.png" density="port-mdpi"/>
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-XHDPI-2022.png" density="port-xhdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-HDPI-2023.png" density="land-hdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-LDPI-2023.png" density="land-ldpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-MDPI-2023.png" density="land-mdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Landscape-XHDPI-2023.png" density="land-xhdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-HDPI-2023.png" density="port-hdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-LDPI-2023.png" density="port-ldpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-MDPI-2023.png" density="port-mdpi"/>
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-XHDPI-2023.png" density="port-xhdpi"/>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -105,7 +105,7 @@
         <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-768-1024.png" width="768" height="1024" />
         <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-750-1334.png" width="750" height="1334" />
         <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-828-1792.png" width="828" height="1792" />
-        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1242-2208.png" width="1242" height="2208" />
+        <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1242-2208.png" width="1242" height="2208" /> 
         <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1125-2436.png" width="1125" height="2436" />
         <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1242-2688.png" width="1242" height="2688" />
         <splash src="res/Images.xcassets/LaunchImage.launchimage/LaunchScreen-Portrait-1536-2008.png" width="1536" height="2008" />
