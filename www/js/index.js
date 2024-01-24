@@ -323,6 +323,9 @@ $(document).ready(function (event) {
           $("#dewanGubernur").show();
           $("#readPrakata").attr("data-url",pdfYear.prakataLink);
           $("#readPrakata").attr("data-chapter","Prakata");
+          if (selectedYear === '2023' && LANG === 'EN') {
+            $("#prakataDwn").hide();
+          }
         } else {
           $("#prakataDwn").hide();
           $("#dewanGubernur").hide();
@@ -1321,6 +1324,9 @@ function generateHome(){
         if (parseInt(selectedYear) >= 2021) {
           $("#prakataDwn").show();
           $("#dewanGubernur").show();
+          if (selectedYear === '2023' && LANG === 'EN') {
+            $("#prakataDwn").hide();
+          }
         } else {
           $("#prakataDwn").hide();
           $("#dewanGubernur").hide();

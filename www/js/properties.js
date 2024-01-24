@@ -1390,7 +1390,7 @@ var pdfLink = {
 			"title": 	"Sinergi Memperkuat Ketahanan dan Kebangkitan Ekonomi Nasional",
 			"prakata" : `Prakata`,
 			"prakataLink" : comingSoonIDLink,
-			"content": [
+			/* "content": [
         {
 					"title": 	"Tinjauan Umum",
 					"link": 	comingSoonIDLink,
@@ -1451,14 +1451,22 @@ var pdfLink = {
 					"desc"  : "",
 					"class" : 	"indent"
 				}
+      ], */
+			"content": [
+				{
+					"title": 	"Laporan Perekonomian Indonesia 2023",
+					"link": 	comingSoonIDLink,
+					"desc"  : "",
+					"class" : 	"indent"
+				}
       ]
 		},
     "EN" : {
 			"cover" : "cover2023.jpg",
-			"title": 	"<EN - title - report Book 2023>",
-			"prakata" : `EN - desc - report Book 2023`,
+			"title": 	"",
+			"prakata" : ``,
 			"prakataLink" : comingSoonENLink,
-			"content": [
+			/* "content": [
         {
 					"title": 	"Overview",
 					"link": 	comingSoonENLink,
@@ -1515,6 +1523,14 @@ var pdfLink = {
 				},
 				{
 					"title": 	"Indonesia Economic Report 2022",
+					"link": 	comingSoonENLink,
+					"desc": 	"",
+					"class" : 	"indent"
+				}
+      ], */
+			"content": [
+				{
+					"title": 	"Indonesia Economic Report 2023",
 					"link": 	comingSoonENLink,
 					"desc": 	"",
 					"class" : 	"indent"
