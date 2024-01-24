@@ -1390,53 +1390,53 @@ var pdfLink = {
 			"title": 	"Sinergi Memperkuat Ketahanan dan Kebangkitan Ekonomi Nasional",
 			"prakata" : `Prakata`,
 			"prakataLink" : comingSoonIDLink,
-			/* "content": [
+			"content": [
         {
-					"title": 	"Tinjauan Umum",
+					"title": 	"Tinjauan Umum Sinergi Memperkuat Ketahanan dan Kebangkitan Ekonomi Nasional",
 					"link": 	comingSoonIDLink,
-          "desc"  : "",
+          "desc"  : "Pemulihan ekonomi Indonesia terus berlanjut dan stabilitas perekonomian tetap terjaga pada 2023, di tengah pertumbuhan ekonomi dunia yang menurun dan ketidakpastian pasar keuangan yang tinggi. Respons bauran kebijakan Bank Indonesia yang bersinergi dengan kebijakan ekonomi nasional menjadi kunci kinerja ekonomi Indonesia yang berdaya tahan tersebut. Bauran kebijakan Bank Indonesia akan terus diperkuat pada 2024, sehingga terus dapat menjaga stabilitas dan mendorong pertumbuhan ekonomi berkelanjutan. Bank Indonesia meyakini bauran dan sinergi kebijakan yang erat akan mampu memperkuat dan mendorong lebih lanjut kebangkitan ekonomi nasional menuju Indonesia Maju.",
 					"class" : ""
 				},
 				{
-					"title": 	"Bab x",
+					"title": 	"Bab 1 Kinerja dan Prospek Ekonomi Global: Pertumbuhan Melambat, Ketidakpastian Tinggi",
 					"link": 	comingSoonIDLink,
-					"desc"  : "",
+					"desc"  : "Dinamika ekonomi dunia yang berubah cepat dengan diikuti oleh meruncingnya ketegangan geopolitik memperburuk prospek ekonomi serta meningkatkan ketidakpastian pasar keuangan global. Hal ini ditandai dengan mengemukanya 5 (lima) tantangan yang secara umum telah menurunkan prospek perekonomian dunia, meningkatkan divergensi investasi dan perdagangan antara negara maju dan negara berkembang, serta mendorong makin tingginya ketidakpastian pasar keuangan global. Berbagai tantangan tersebut menuntut penguatan kerja sama internasional baik skala multilateral maupun regional untuk memitigasi risiko sedini mungkin dampak rambatannya pada ketahanan perekonomian dan memperkuat pemulihan ekonomi global.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Bab x",
+					"title": 	"Bab 2 Kinerja dan Prospek Ekonomi Nasional: Stabilitas Tetap Terjaga, Pemulihan Berlanjut",
 					"link": 	comingSoonIDLink,
-					"desc"  : "",
+					"desc"  : "Sinergi respons bauran kebijakan ekonomi nasional yang prudent dan konsisten dapat menopang berlanjutnya pemulihan perekonomian nasional, di tengah perlambatan ekonomi global. Pertumbuhan ekonomi diprakirakan mencapai 4,5-5,3% pada 2023, dan akan meningkat menjadi 4,7-5,5% pada 2024 didukung stabilitas yang tetap terjaga. Inflasi turun lebih cepat dan terkendali dalam kisaran sasaran. Ketahanan perbankan dan stabilitas sistem keuangan terjaga ditopang likuiditas yang tetap memadai, permodalan yang kuat dan risiko kredit yang rendah. Ke depan, prospek ekonomi domestik pada 2025 diprakirakan terus membaik sebesar 4,8-5,6% dengan stabilitas moneter dan stabilitas sistem keuangan yang terjaga.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Bab x",
+					"title": 	"Bab 3 Bauran Kebijakan Bank Indonesia 2023: Menjaga Stabilitas, Mendukung Pertumbuhan Berkelanjutan",
 					"link": 	comingSoonIDLink,
-					"desc"  : "",
+					"desc"  : "Bank Indonesia menempuh bauran kebijakan untuk menjaga stabilitas dan mendukung pertumbuhan berkelanjutan. Dalam kaitan ini, kebijakan moneter diarahkan untuk menjaga stabilitas (<i>pro-stability</i>), sedangkan 4 (empat) instrumen lainnya, yakni kebijakan makroprudensial, sistem pembayaran, pendalaman pasar uang, serta ekonomi-keuangan inklusif dan hijau diarahkan untuk mendorong pertumbuhan ekonomi (<i>pro-growth</i>). Bauran kebijakan Bank Indonesia yang turut bersinergi dengan kebijakan ekonomi nasional mampu menjaga stabilitas perekonomian dan mendorong berlanjutnya momentum pertumbuhan Indonesia di tengah perlambatan ekonomi global.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Bab x",
+					"title": 	"Bab 4 Sinergi Bauran Kebijakan Ekonomi Nasional: Lima Arah Respons Kebijakan",
 					"link": 	comingSoonIDLink,
-					"desc"  : "",
+					"desc"  : "Lima arah sinergi bauran kebijakan nasional perlu ditempuh untuk memperkuat ketahanan dan kebangkitan perekonomian nasional. <i>Pertama</i>, penguatan koordinasi kebijakan fiskal Pemerintah dengan kebijakan moneter dan makroprudensial Bank Indonesia untuk menjaga keseimbangan antara stabilitas makroekonomi dan mendorong pertumbuhan ekonomi. <i>Kedua</i>, penguatan koordinasi KSSK untuk menjaga stabilitas sistem keuangan dan mendorong pembiayaan perekonomian. <i>Ketiga</i>, sinergi kebijakan akselerasi digitalisasi untuk mempercepat inklusi ekonomi dan keuangan. <i>Keempat</i>, sinergi kebijakan untuk perluasan hilirisasi minerba ke sektor pertanian, perkebunan, dan perikanan guna meningkatkan nilai tambah ekspor dan pengembangan industri dalam negeri. <i>Kelima</i>, kebijakan perluasan perdagangan dan investasi ke negara-negara sumber pertumbuhan ekonomi dunia ke depan.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Bab x",
+					"title": 	"Bab 5 Arah Bauran Kebijakan Bank Indonesia Tahun 2024: Menjaga Stabilitas, Mendorong Pertumbuhan Berkelanjutan",
 					"link": 	comingSoonIDLink,
-					"desc"  : "",
+					"desc"  : "Bauran kebijakan Bank Indonesia pada 2024 akan terus diarahkan untuk menjaga stabilitas dan mendukung pertumbuhan ekonomi berkelanjutan. Kebijakan moneter Bank Indonesia difokuskan untuk menjaga stabilitas (<i>pro-stability</i>), sedangkan kebijakan makroprudensial, sistem pembayaran, pendalaman pasar uang, serta ekonomi- keuangan inklusif dan hijau akan terus diarahkan untuk mendorong pertumbuhan ekonomi berkelanjutan (<i>pro-growth</i>). Bank Indonesia juga akan terus mempererat sinergi dan koordinasi baik dengan kebijakan Pemerintah dan Komite Stabilitas Sistem Keuangan (KSSK), maupun dengan industri keuangan, dunia usaha, dan asosiasi.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Bab x",
+					"title": 	"Bab 6 Keketuaan Indonesia Dalam Asean 2023: Asean <i>Matters - Epicentrum of Growth</i>",
 					"link": 	comingSoonIDLink,
-					"desc"  : "",
+					"desc"  : "Setelah sukses dalam Keketuaan Indonesia pada G20 2022, Indonesia menerima estafet keketuaan ASEAN dari Kamboja pada 2023 dan mengangkat tema &#8220;<i>ASEAN Matters: Epicentrum of Growth</i>&#8221;. Bank Indonesia bersinergi erat dengan Pemerintah guna mendukung keberhasilan Keketuaan Indonesia pada ASEAN 2023 tersebut. Peran strategis Bank Indonesia dalam mendukung kesuksesan Keketuaan Indonesia dilakukan melalui 5 (lima) capaian. Keketuaan Indonesia 2023 berjalan sukses dan mampu menghasilkan berbagai agenda penting untuk memperkuat ekonomi dan keuangan kawasan menghadapi ketidakpastian global dan sinergi untuk menjadi pusat pertumbuhan global.",
           "class" : 	"indent"
 				},
 				{
-					"title": 	"Bab x",
+					"title": 	"Bab 7 Penguatan Kebijakan Hilirisasi Untuk Kebangkitan Ekonomi",
 					"link": 	comingSoonIDLink,
-					"desc"  : "",
+					"desc"  : "Kebijakan hilirisasi merupakan langkah strategis untuk memperkuat upaya meningkatkan nilai tambah dan produktivitas, tetapi juga mendukung stabilitas perekonomian. Kebijakan hilirisasi untuk mendukung stabilitas perekonomian dan meningkatkan nilai tambah dan produktivitas dapat ditempuh melalui hilirisasi pangan serta hilirisasi mineral dan batubara (minerba). Ke depan, sinergi kebijakan perlu terus diperkuat guna memperkuat hilirisasi untuk mendukung transformasi Indonesia menuju negara maju, antara lain melalui perbaikan faktor produksi, penguatan aspek pengaturan dan kelembagaan, serta penguatan kerja sama perdagangan dan promosi.",
           "class" : 	"indent"
 				},
 				{
@@ -1451,15 +1451,7 @@ var pdfLink = {
 					"desc"  : "",
 					"class" : 	"indent"
 				}
-      ], */
-			"content": [
-				{
-					"title": 	"Laporan Perekonomian Indonesia 2023",
-					"link": 	comingSoonIDLink,
-					"desc"  : "",
-					"class" : 	"indent"
-				}
-      ]
+      ],
 		},
     "EN" : {
 			"cover" : "cover2023.jpg",
