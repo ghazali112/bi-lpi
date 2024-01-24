@@ -703,7 +703,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 4.2;
+				CURRENT_PROJECT_VERSION = 4.3.4;
 				DEVELOPMENT_TEAM = 9YXX78XQBZ;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -714,7 +714,7 @@
 				INFOPLIST_FILE = "Laporan Perekonomian Indonesia/Laporan Perekonomian Indonesia-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				MARKETING_VERSION = 4.2;
+				MARKETING_VERSION = 4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.backstage.biProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -735,7 +735,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 4.2;
+				CURRENT_PROJECT_VERSION = 4.3.4;
 				DEVELOPMENT_TEAM = 9YXX78XQBZ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Laporan Perekonomian Indonesia/Laporan Perekonomian Indonesia-Prefix.pch";
@@ -744,7 +744,7 @@
 				INFOPLIST_FILE = "Laporan Perekonomian Indonesia/Laporan Perekonomian Indonesia-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				MARKETING_VERSION = 4.2;
+				MARKETING_VERSION = 4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.backstage.biProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
