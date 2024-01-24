@@ -1390,7 +1390,7 @@ var pdfLink = {
 			"title": 	"Sinergi Memperkuat Ketahanan dan Kebangkitan Ekonomi Nasional",
 			"prakata" : `Prakata`,
 			"prakataLink" : comingSoonIDLink,
-			/* "content": [
+			"content": [
         {
 					"title": 	"Tinjauan Umum",
 					"link": 	comingSoonIDLink,
@@ -1451,15 +1451,7 @@ var pdfLink = {
 					"desc"  : "",
 					"class" : 	"indent"
 				}
-      ], */
-			"content": [
-				{
-					"title": 	"Laporan Perekonomian Indonesia 2023",
-					"link": 	comingSoonIDLink,
-					"desc"  : "",
-					"class" : 	"indent"
-				}
-      ]
+      ],
 		},
     "EN" : {
 			"cover" : "cover2023.jpg",

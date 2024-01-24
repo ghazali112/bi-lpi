@@ -324,7 +324,7 @@ $(document).ready(function (event) {
           $("#readPrakata").attr("data-url",pdfYear.prakataLink);
           $("#readPrakata").attr("data-chapter","Prakata");
           if (selectedYear === '2023' && LANG === 'EN') {
-            $("#prakataDwn").hide();
+            $("#prakataSection").hide();
           }
         } else {
           $("#prakataDwn").hide();
@@ -1325,7 +1325,7 @@ function generateHome(){
           $("#prakataDwn").show();
           $("#dewanGubernur").show();
           if (selectedYear === '2023' && LANG === 'EN') {
-            $("#prakataDwn").hide();
+            $("#prakataSection").hide();
           }
         } else {
           $("#prakataDwn").hide();
