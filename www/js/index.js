@@ -830,7 +830,9 @@ $(document).ready(function (event) {
         }
     });
 
+    // TODO: fix on this
     $(document).on("click","#readPdf, #readPrakata",function(e){
+        showAlert('begin getting pdf');
         e.stopPropagation();
         e.stopImmediatePropagation();
         
@@ -843,7 +845,7 @@ $(document).ready(function (event) {
         selectedChapter = $(this).attr("data-chapter");
         var finalUrl = "js/pdfJs/web/viewer.html?file="+url;
         console.log(finalUrl);
-
+        showAlert('finalUrl : ', finalUrl);
         $("#pdfImage").attr("src",finalUrl);
 
         $(".pdfTitle").html("LPI " + selectedYear);
@@ -1383,6 +1385,7 @@ var loading = {
 }
 
 function getPdfData(){
+    showAlert('getPDfData is running');
     $.ajax({
         type: "GET",
         url: "http://lokuttaradhammaapp.com/api/bi/init",
@@ -1400,11 +1403,13 @@ function getPdfData(){
             console.log(JSON.stringify(response));
             console.log(response);
             if(response.error_code == "0") {
+                showAlert('success getting pdf');
                 //callback(response);
                 pdfLink = response;
                 window.localStorage.setItem("pdfLink",pdfLink);
             } else {
                 console.log("ERROR");
+                showAlert('failed to get pdf', response.message);
                 //$.mobile.loading('hide');
                 //showAlert(response.message);
             }
