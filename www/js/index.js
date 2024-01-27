@@ -832,7 +832,6 @@ $(document).ready(function (event) {
 
     // TODO: fix on this
     $(document).on("click","#readPdf, #readPrakata",function(e){
-        showAlert('begin getting pdf');
         e.stopPropagation();
         e.stopImmediatePropagation();
         
@@ -845,13 +844,10 @@ $(document).ready(function (event) {
         selectedChapter = $(this).attr("data-chapter");
         var finalUrl = "js/pdfJs/web/viewer.html?file="+url;
         console.log(finalUrl);
-        showAlert('finalUrl : ', finalUrl);
-        $("#pdfImage").attr("src",finalUrl);
-
-        $(".pdfTitle").html("LPI " + selectedYear);
         
+        $("#pdfImage").attr("src",finalUrl);
+        $(".pdfTitle").html("LPI " + selectedYear);
         $("#pdfContainer").addClass("on");
-
     });
 
     $(document).on("click",".sideBarPdf",function(e){

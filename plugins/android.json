@@ -8,31 +8,31 @@
   },
   "installed_plugins": {
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.bi.lpi20"
+      "PACKAGE_NAME": "com.backstage.biProject"
     },
     "cordova-plugin-document-viewer": {
-      "PACKAGE_NAME": "com.bi.lpi20"
+      "PACKAGE_NAME": "com.backstage.biProject"
     },
     "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.bi.lpi20"
+      "PACKAGE_NAME": "com.backstage.biProject"
     },
     "cordova-plugin-file-transfer": {
-      "PACKAGE_NAME": "com.bi.lpi20"
+      "PACKAGE_NAME": "com.backstage.biProject"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.bi.lpi20"
+      "PACKAGE_NAME": "com.backstage.biProject"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.bi.lpi20"
+      "PACKAGE_NAME": "com.backstage.biProject"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.bi.lpi20"
+      "PACKAGE_NAME": "com.backstage.biProject"
     },
     "cordova-plugin-wkwebview-engine": {
-      "PACKAGE_NAME": "com.bi.lpi20"
+      "PACKAGE_NAME": "com.backstage.biProject"
     },
     "cordova-plugin-wkwebviewxhrfix": {
-      "PACKAGE_NAME": "com.bi.lpi20"
+      "PACKAGE_NAME": "com.backstage.biProject"
     }
   },
   "dependent_plugins": {}
