@@ -13,8 +13,8 @@ var selectedYear = ""
 
 const report2020pdflink = "https://www.bi.go.id/id/publikasi/laporan/Documents/LPI_2020.pdf";
 const report2020vEngPdfLink = "https://www.bi.go.id/en/publikasi/laporan/Documents/10.LPI2020_full.pdf";
-const comingSoonIDLink = "https://storage.googleapis.com/bi-lpi-2020/LPI-COMING-SOON-2021-ID.pdf";
-const comingSoonENLink = "https://storage.googleapis.com/bi-lpi-2020/LPI-COMING-SOON-2021-EN.pdf";
+const comingSoonIDLink = "https://storage.googleapis.com/bi-lpi-2020/LPI_COMING_SOON_EN.pdf";
+const comingSoonENLink = "https://storage.googleapis.com/bi-lpi-2020/LPI_COMING_SOON_ID.pdf";
 
 const report_2021_ID_prakata = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_forewood.pdf";
 const report_2021_ID_overview = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_overview.pdf";
