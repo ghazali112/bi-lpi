@@ -1,0 +1,39 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.bi.lpi20"
+    },
+    "cordova-plugin-document-viewer": {
+      "PACKAGE_NAME": "com.bi.lpi20"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.bi.lpi20"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.bi.lpi20"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.bi.lpi20"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.bi.lpi20"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.bi.lpi20"
+    },
+    "cordova-plugin-wkwebview-engine": {
+      "PACKAGE_NAME": "com.bi.lpi20"
+    },
+    "cordova-plugin-wkwebviewxhrfix": {
+      "PACKAGE_NAME": "com.bi.lpi20"
+    }
+  },
+  "dependent_plugins": {}
+}

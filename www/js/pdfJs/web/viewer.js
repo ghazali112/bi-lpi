@@ -950,7 +950,16 @@ var PDFViewerApplication = {
                 }
               }
               loadingTask = (0, _pdfjsLib.getDocument)(parameters);
-
+              
+              /* let _realUrl = window.location.href;
+              
+              let getParamsIndex = _realUrl.indexOf("?");
+              let fileParamKeyValue = _realUrl.substring(getParamsIndex+1);
+              
+              let getEqualsIndex = fileParamKeyValue.indexOf("=");
+              let pdfFile = fileParamKeyValue.substring(getEqualsIndex+1);
+              
+              loadingTask = (0, _pdfjsLib.getDocument)(pdfFile); */
               this.pdfLoadingTask = loadingTask;
               loadingTask.onPassword = function (updateCallback, reason) {
                 _this2.passwordPrompt.setUpdateCallback(updateCallback, reason);
@@ -1547,13 +1556,15 @@ var PDFViewerApplication = {
 };
 var validateFileURL = void 0;
 {
-  var HOSTED_VIEWER_ORIGINS = ['null', 'http://mozilla.github.io', 'https://mozilla.github.io','https://mozilla.github.io','https://www.bi.go.id/*','https://www.bi.go.id/id/publikasi/laporan-tahunan/perekonomian/Documents/','http://localhost:8888','file://'];
+  var HOSTED_VIEWER_ORIGINS = ['null', 'http://mozilla.github.io', 'https://mozilla.github.io','https://mozilla.github.io','https://www.bi.go.id/*','https://www.bi.go.id/id/publikasi/laporan-tahunan/perekonomian/Documents/','http://localhost:8888','file://', 'https://storage.googleapis.com/'];
   validateFileURL = function validateFileURL(file) {
     if (file === undefined) {
       return;
     }
     try {
       var viewerOrigin = new _pdfjsLib.URL(window.location.href).origin || 'null';
+      /* var LOCAL_AUTO_DETECT_ORIGIN = window.location.origin;
+      HOSTED_VIEWER_ORIGINS.push(LOCAL_AUTO_DETECT_ORIGIN); */
       if (HOSTED_VIEWER_ORIGINS.includes(viewerOrigin)) {
         return;
       }
@@ -1562,8 +1573,8 @@ var validateFileURL = void 0;
           origin = _ref14.origin,
           protocol = _ref14.protocol;
           
-          console.log(origin);
-          console.log(viewerOrigin);
+          console.log('fileOrigin : ', origin);
+          console.log('viewerOrigin : ', viewerOrigin);
       if (origin !== viewerOrigin && protocol !== 'blob:') {
         throw new Error('file origin does not match viewer\'s');
       }
