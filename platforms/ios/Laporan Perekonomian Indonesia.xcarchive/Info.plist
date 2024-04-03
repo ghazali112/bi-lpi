@@ -13,9 +13,9 @@
 		<key>CFBundleIdentifier</key>
 		<string>com.backstage.biProject</string>
 		<key>CFBundleShortVersionString</key>
-		<string>4.3.1</string>
+		<string>4.5.1</string>
 		<key>CFBundleVersion</key>
-		<string>4.3.1</string>
+		<string>4.5.1</string>
 		<key>SigningIdentity</key>
 		<string>Apple Development: Khairul Ilmi (6MYAVPTAVH)</string>
 		<key>Team</key>
@@ -24,7 +24,7 @@
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
 	<key>CreationDate</key>
-	<date>2023-04-01T14:40:47Z</date>
+	<date>2024-03-28T20:12:37Z</date>
 	<key>Name</key>
 	<string>Laporan Perekonomian Indonesia</string>
 	<key>SchemeName</key>

@@ -314,7 +314,22 @@ $(document).ready(function (event) {
 
         $("#laporanTitle").html(pdfYear.title);
         
-        if (selectedYear == "2018" || selectedYear == "2021" || selectedYear == "2022") {
+        $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+LANG+"_primary.jpg")
+        $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg")
+        $("#laporanTitle").html(pdfYear.title);
+
+        if (parseInt(selectedYear) >= 2021) {
+          $("#prakataDwn").show();
+          $("#dewanGubernur").show();
+          $("#readPrakata").attr("data-url",pdfYear.prakataLink);
+          $("#readPrakata").attr("data-chapter","Prakata");
+        } else {
+          $("#prakataDwn").hide();
+          $("#dewanGubernur").hide();
+        }
+
+        // if (selectedYear == "2018" || selectedYear == "2021" || selectedYear == "2022") {
+        /* if (selectedYear.includes("2018", "2021", "2022", "2023")) {
             $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+selectedYear+"_"+LANG+".jpg");
             $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg");
             $("#prakataDwn").show();
@@ -331,7 +346,7 @@ $(document).ready(function (event) {
         } else {
             $("#prakataDwn").hide();
             $("#dewanGubernur").hide();
-        }
+        } */
 
         $("#prakataId").html(pdfYear.prakata);
 
@@ -812,6 +827,7 @@ $(document).ready(function (event) {
         }
     });
 
+    // TODO: fix on this
     $(document).on("click","#readPdf, #readPrakata",function(e){
         e.stopPropagation();
         e.stopImmediatePropagation();
@@ -825,13 +841,10 @@ $(document).ready(function (event) {
         selectedChapter = $(this).attr("data-chapter");
         var finalUrl = "js/pdfJs/web/viewer.html?file="+url;
         console.log(finalUrl);
-
-        $("#pdfImage").attr("src",finalUrl);
-
-        $(".pdfTitle").html("LPI " + selectedYear);
         
+        $("#pdfImage").attr("src",finalUrl);
+        $(".pdfTitle").html("LPI " + selectedYear);
         $("#pdfContainer").addClass("on");
-
     });
 
     $(document).on("click",".sideBarPdf",function(e){
@@ -1299,22 +1312,32 @@ function generateHome(){
         var pdfObj = pdfLink[selectedYear][LANG].content;
         
         var restHtml="";
-
+        $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+LANG+"_primary.jpg")
+        $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg")
         $("#laporanTitle").html(pdfLink[selectedYear][LANG].title);
-        if (selectedYear == "2018" || selectedYear == "2021" || selectedYear == "2022") {
-          $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+selectedYear+"_"+LANG+".jpg")
-          $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg")
-          $("#prakataDwn").show();
-          $("#dewanGubernur").show();
-        } else if (selectedYear == "2019" || selectedYear == "2020") {
-          $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+LANG+".jpg");
-          $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg");
+
+        if (parseInt(selectedYear) >= 2021) {
           $("#prakataDwn").show();
           $("#dewanGubernur").show();
         } else {
           $("#prakataDwn").hide();
           $("#dewanGubernur").hide();
         }
+
+        // if (selectedYear == "2018" || selectedYear == "2021" || selectedYear == "2022") {
+        /* if (selectedYear.includes("2018", "2021", "2022", "2023")) {
+          $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg")
+          $("#prakataDwn").show();
+          $("#dewanGubernur").show();
+        } else if (selectedYear == "2019" || selectedYear == "2020") {
+          // $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+LANG+".jpg");
+          $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg");
+          $("#prakataDwn").show();
+          $("#dewanGubernur").show();
+        } else {
+          $("#prakataDwn").hide();
+          $("#dewanGubernur").hide();
+        } */
         $("#prakataId").html(pdfLink[selectedYear][LANG].prakata);
         $("#mainImage").html('<img src="img/'+pdfLink[selectedYear][LANG].cover+'" />');
         for(var i=0;i<pdfObj.length;i++) {
@@ -1352,6 +1375,7 @@ var loading = {
 }
 
 function getPdfData(){
+    showAlert('getPDfData is running');
     $.ajax({
         type: "GET",
         url: "http://lokuttaradhammaapp.com/api/bi/init",
@@ -1369,11 +1393,13 @@ function getPdfData(){
             console.log(JSON.stringify(response));
             console.log(response);
             if(response.error_code == "0") {
+                showAlert('success getting pdf');
                 //callback(response);
                 pdfLink = response;
                 window.localStorage.setItem("pdfLink",pdfLink);
             } else {
                 console.log("ERROR");
+                showAlert('failed to get pdf', response.message);
                 //$.mobile.loading('hide');
                 //showAlert(response.message);
             }

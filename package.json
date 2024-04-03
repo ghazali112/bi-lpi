@@ -33,12 +33,12 @@
     },
     "platforms": [
       "ios",
-      "android",
-      "browser"
+      "browser",
+      "android"
     ]
   },
   "devDependencies": {
-    "cordova-android": "^9.1.0",
+    "cordova-android": "^12.0.1",
     "cordova-browser": "^7.0.0",
     "cordova-plugin-wkwebview-engine": "^1.2.1",
     "cordova-plugin-wkwebviewxhrfix": "git+https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix.git"
