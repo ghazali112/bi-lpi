@@ -295,7 +295,7 @@ var pdfLink = {
 						},
 						{
 							"title": "Lampiran",
-							"link": "https://www.bi.go.id/id/publikasi/laporan/Documents/LPI2016-web.pdf#page=299",
+							"link": "https://storage.googleapis.com/bi-lpi-2020/2024-book-test.pdf",
 							"desc": "",
 							"class" : "indent"
 						},
@@ -561,12 +561,6 @@ var pdfLink = {
 						"transparansi Bank Indonesia sebagaimana diamanatkan dalam Undang-Undang Bank Indonesia.",
 			"prakataLink" : "https://www.bi.go.id/id/publikasi/laporan/Documents/14_LPI2018.pdf#page=18",
 			"content": [
-				// {
-				// 	"title": "Cover",
-				// 	"link": "https://www.bi.go.id/id/publikasi/laporan-tahunan/perekonomian/Documents/1_LPI2018_COVER-DAFTARISI-PRAKATA.pdf",
-				// 	"desc": "",
-				// 	"class" : ""
-				// },
 				{
 					"title": "Tinjauan Umum",
 					"link": "https://www.bi.go.id/id/publikasi/laporan/Documents/14_LPI2018.pdf#page=23",
@@ -1574,7 +1568,7 @@ var pdfLink = {
   }
 }
 
-var listLPI = ["2024", "2023", "2022", "2021", "2020","2019","2018","2017","2016","2015"];
+var listLPI = ["2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015"];
 
 var GLOBAL_MESSAGE = {
   "ID" : {
