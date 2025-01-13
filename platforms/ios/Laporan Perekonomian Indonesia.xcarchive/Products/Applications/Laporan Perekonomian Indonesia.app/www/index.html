@@ -76,12 +76,14 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="js/bootstrap-4.1.0-dist/js/bootstrap.min.js"></script>
-        <!-- <script>
+        <script>
           $(document).on("mobileinit", function() {
             /* Disable pushState to avoid replaceState issues */
+            $.mobile.hashListeningEnabled = false;
             $.mobile.pushStateEnabled = false;
+            $.mobile.changePage.defaults.changeHash = false;
           });
-        </script> -->
+        </script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="js/pdfJs/build/pdf.js"></script>
         <script type="text/javascript" src="js/pdfJs/build/pdf.worker.js"></script>
