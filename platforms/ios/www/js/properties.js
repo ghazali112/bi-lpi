@@ -294,7 +294,7 @@ var pdfLink = {
 							"class" : "indent"
 						},
 						{
-							"title": "Lampiran",
+							"title": "Lampiran - Beta",
 							"link": "https://storage.googleapis.com/bi-lpi-2020/2024-book-test.pdf",
 							"desc": "",
 							"class" : "indent"
