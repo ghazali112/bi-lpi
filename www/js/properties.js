@@ -86,17 +86,17 @@ const report_2023_EN_bab7 = "https://storage.googleapis.com/bi-lpi-2020/2023/EN/
 const report_2023_EN_appendices = "https://storage.googleapis.com/bi-lpi-2020/2023/EN/LPI_2023_EN_lampiran.pdf";
 const report_2023_EN_full = "https://storage.googleapis.com/bi-lpi-2020/2023/EN/LPI_2023_EN_FULL.pdf";
 
-const report_2024_ID_prakata = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_forewood_v3.pdf#page=18";
-const report_2024_ID_overview = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_overview_v2.pdf";
-const report_2024_ID_bab1 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_BAB1_v3.pdf";
-const report_2024_ID_bab2 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_BAB2_v2.pdf";
-const report_2024_ID_bab3 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_BAB3_v3.pdf";
-const report_2024_ID_bab4 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_BAB4_v3.pdf";
-const report_2024_ID_bab5 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_BAB5_v2.pdf";
-const report_2024_ID_bab6 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_BAB6_v2.pdf";
-const report_2024_ID_bab7 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_BAB7_v2.pdf";
-const report_2024_ID_appendices = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_appendices_v3.pdf";
-const report_2024_ID_full = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-SOON/LPI_2024_ID_FULL_v4.pdf";
+const report_2024_ID_prakata = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_forewood_v3.pdf#page=18";
+const report_2024_ID_overview = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_overview_v2.pdf";
+const report_2024_ID_bab1 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB1_v3.pdf";
+const report_2024_ID_bab2 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB2_v2.pdf";
+const report_2024_ID_bab3 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB3_v3.pdf";
+const report_2024_ID_bab4 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB4_v3.pdf";
+const report_2024_ID_bab5 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB5_v2.pdf";
+const report_2024_ID_bab6 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB6_v2.pdf";
+const report_2024_ID_bab7 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB7_v2.pdf";
+const report_2024_ID_appendices = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_appendices_v3.pdf";
+const report_2024_ID_full = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_FULL_v4.pdf";
 
 const report_2024_EN_prakata = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
 const report_2024_EN_overview = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
