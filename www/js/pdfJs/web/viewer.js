@@ -1556,7 +1556,7 @@ var PDFViewerApplication = {
 };
 var validateFileURL = void 0;
 {
-  var HOSTED_VIEWER_ORIGINS = ['null', 'http://mozilla.github.io', 'https://mozilla.github.io','https://mozilla.github.io','https://www.bi.go.id/*','https://www.bi.go.id/id/publikasi/laporan-tahunan/perekonomian/Documents/','http://localhost:8888','file://', 'https://storage.googleapis.com/'];
+  var HOSTED_VIEWER_ORIGINS = ['null', 'http://mozilla.github.io', 'https://mozilla.github.io','https://mozilla.github.io','https://www.bi.go.id/*','https://www.bi.go.id/id/publikasi/laporan-tahunan/perekonomian/Documents/','http://localhost:8888','file://', 'https://storage.googleapis.com/', 'https://storage.googleapis.com'];
   validateFileURL = function validateFileURL(file) {
     if (file === undefined) {
       return;
