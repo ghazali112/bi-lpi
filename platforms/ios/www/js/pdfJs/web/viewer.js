@@ -1556,7 +1556,7 @@ var PDFViewerApplication = {
 };
 var validateFileURL = void 0;
 {
-  var HOSTED_VIEWER_ORIGINS = ['null', 'http://mozilla.github.io', 'https://mozilla.github.io','https://mozilla.github.io','https://www.bi.go.id/*','https://www.bi.go.id/id/publikasi/laporan-tahunan/perekonomian/Documents/','http://localhost:8888','file://', 'https://storage.googleapis.com/'];
+  var HOSTED_VIEWER_ORIGINS = ['null', 'http://mozilla.github.io', 'https://mozilla.github.io','https://mozilla.github.io','https://www.bi.go.id/*','https://www.bi.go.id/id/publikasi/laporan-tahunan/perekonomian/Documents/','http://localhost:8888','file://', 'https://storage.googleapis.com/', 'https://storage.googleapis.com', 'https://storage.googleapis.com/*'];
   validateFileURL = function validateFileURL(file) {
     if (file === undefined) {
       return;
@@ -1574,12 +1574,16 @@ var validateFileURL = void 0;
           protocol = _ref14.protocol;
           
           console.log('fileOrigin : ', origin);
+          alert('fileOrigin: ', origin);
+          alert('viewerOrigin: ', viewerOrigin);
           console.log('viewerOrigin : ', viewerOrigin);
       if (origin !== viewerOrigin && protocol !== 'blob:') {
+        alert('error log 1')
         throw new Error('file origin does not match viewer\'s');
       }
     } catch (ex) {
       var message = ex && ex.message;
+      alert('error log 2', ex.message);
       PDFViewerApplication.l10n.get('loading_error', null, 'An error occurred while loading the PDF.').then(function (loadingErrorMessage) {
         PDFViewerApplication.error(loadingErrorMessage, { message: message });
       });

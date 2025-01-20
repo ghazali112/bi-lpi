@@ -1,20 +1,20 @@
-var selectedYear = ""
-,selectedUrl=""
-,isApp=false
-,defaultPdfUrl = ""
-,selectedChapter = ""
-,highlightRender =""
-.highlightText = ""
-,globalSearchKeyword =""
-,triggerCreate=false
-,LOADING_MODAL_PROP={backdrop: 'static', keyboard: false}
-,LANG = "ID"
-;
+var selectedYear = "";
+var selectedUrl = "";
+var isApp = false
+var defaultPdfUrl = "";
+var selectedChapter = "";
+var highlightRender  = ""
+var highlightText = "";
+var globalSearchKeyword = "";
+var triggerCreate = false;
+var LOADING_MODAL_PROP = {
+  backdrop: 'static',
+  keyboard: false 
+};
+var LANG = "ID";
 
 const report2020pdflink = "https://www.bi.go.id/id/publikasi/laporan/Documents/LPI_2020.pdf";
 const report2020vEngPdfLink = "https://www.bi.go.id/en/publikasi/laporan/Documents/10.LPI2020_full.pdf";
-const comingSoonIDLink = "https://storage.googleapis.com/bi-lpi-2020/LPI_COMING_SOON_EN.pdf";
-const comingSoonENLink = "https://storage.googleapis.com/bi-lpi-2020/LPI_COMING_SOON_ID.pdf";
 
 const report_2021_ID_prakata = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_forewood.pdf";
 const report_2021_ID_overview = "https://storage.googleapis.com/bi-lpi-2020/2021/LPI_2021_ID_overview.pdf";
@@ -85,6 +85,30 @@ const report_2023_EN_bab6 = "https://storage.googleapis.com/bi-lpi-2020/2023/EN/
 const report_2023_EN_bab7 = "https://storage.googleapis.com/bi-lpi-2020/2023/EN/LPI_2023_EN_BAB7.pdf";
 const report_2023_EN_appendices = "https://storage.googleapis.com/bi-lpi-2020/2023/EN/LPI_2023_EN_lampiran.pdf";
 const report_2023_EN_full = "https://storage.googleapis.com/bi-lpi-2020/2023/EN/LPI_2023_EN_FULL.pdf";
+
+const report_2024_ID_prakata = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_forewood_v3.pdf#page=18";
+const report_2024_ID_overview = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_overview_v2.pdf";
+const report_2024_ID_bab1 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB1_v3.pdf";
+const report_2024_ID_bab2 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB2_v2.pdf";
+const report_2024_ID_bab3 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB3_v3.pdf";
+const report_2024_ID_bab4 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB4_v3.pdf";
+const report_2024_ID_bab5 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB5_v2.pdf";
+const report_2024_ID_bab6 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB6_v2.pdf";
+const report_2024_ID_bab7 = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_BAB7_v2.pdf";
+const report_2024_ID_appendices = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_appendices_v3.pdf";
+const report_2024_ID_full = "https://storage.googleapis.com/bi-lpi-2020/2024/ID-RELEASE/LPI_2024_ID_FULL_v4.pdf";
+
+const report_2024_EN_prakata = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
+const report_2024_EN_overview = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
+const report_2024_EN_bab1 = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
+const report_2024_EN_bab2 = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
+const report_2024_EN_bab3 = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
+const report_2024_EN_bab4 = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
+const report_2024_EN_bab5 = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
+const report_2024_EN_bab6 = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
+const report_2024_EN_bab7 = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
+const report_2024_EN_appendices = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
+const report_2024_EN_full = "https://storage.googleapis.com/bi-lpi-2020/2024/EN/LPI_2024_COMING_SOON.pdf";
 
 var pdfLink = {
 	"2015": {
@@ -271,7 +295,7 @@ var pdfLink = {
 						},
 						{
 							"title": "Lampiran",
-							"link": "https://www.bi.go.id/id/publikasi/laporan/Documents/LPI2016-web.pdf#page=299",
+							"link": "https://storage.googleapis.com/bi-lpi-2020/2024-book-test.pdf",
 							"desc": "",
 							"class" : "indent"
 						},
@@ -537,12 +561,6 @@ var pdfLink = {
 						"transparansi Bank Indonesia sebagaimana diamanatkan dalam Undang-Undang Bank Indonesia.",
 			"prakataLink" : "https://www.bi.go.id/id/publikasi/laporan/Documents/14_LPI2018.pdf#page=18",
 			"content": [
-				// {
-				// 	"title": "Cover",
-				// 	"link": "https://www.bi.go.id/id/publikasi/laporan-tahunan/perekonomian/Documents/1_LPI2018_COVER-DAFTARISI-PRAKATA.pdf",
-				// 	"desc": "",
-				// 	"class" : ""
-				// },
 				{
 					"title": "Tinjauan Umum",
 					"link": "https://www.bi.go.id/id/publikasi/laporan/Documents/14_LPI2018.pdf#page=23",
@@ -1547,10 +1565,151 @@ var pdfLink = {
 				}
       ]
 		}
+  },
+  "2024": {
+    "ID" : {
+			"cover" : "cover2024.jpg",
+			"title": 	"Sinergi Memperkuat Stabilitas dan Transformasi Ekonomi Nasional",
+			"prakata" : `Puji dan syukur kami panjatkan ke hadirat
+      Allah Subhanahu wa Ta&acute;ala (SWT), Tuhan yang Mahakuasa, karena atas Rahmat-Nya Bank Indonesia dapat menyampaikan publikasi Laporan Perekonomian Indonesia (LPI) 2024 sebagai bentuk transparansi kebijakan Bank Indonesia kepada publik sebagaimana dimaksud dalam pasal 58 ayat (7) Undang-Undang No. 23 Tahun 1999 tentang Bank Indonesia yang telah beberapa kali diubah terakhir dengan Undang-Undang
+      No. 4 Tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan.`,
+			"prakataLink" : report_2024_ID_prakata,
+			"content": [
+        {
+					"title": 	"Tinjauan Umum Sinergi untuk Memperkuat Stabilitas dan Transformasi Ekonomi Nasional",
+					"link": 	report_2024_ID_overview,
+          "desc"  : "Pemulihan ekonomi Indonesia terus berlanjut Ke depan, respons bauran kebijakan Bank pada 2024 di tengah dinamika tingginya ketidakpastian global. Pertumbuhan ekonomi Indonesia 2024 tetap solid ditopang oleh permintaan domestik serta stabilitas harga tetap terjaga didukung oleh konsistensi kebijakan moneter Bank Indonesia dan koordinasi erat dengan kebijakan Pemerintah. Neraca Pembayaran Indonesia juga tetap sehat sejalan dengan rendahnya defisit transaksi berjalan serta meningkatnya surplus neraca transaksi modal dan finansial sehingga mendukung terjaganya stabilitas nilai tukar Rupiah. Selain itu, pertumbuhan kredit perbankan meningkat didukung oleh stabilitas sistem keuangan yang tetap kuat serta ditopang oleh likuiditas yang memadai dan permodalan yang kuat. Transaksi ekonomi dan keuangan digital juga terus berkembang pesat, didukung oleh sistem pembayaran yang aman, efisien, dan andal, serta struktur industri dan infrastruktur yang makin kuat.",
+					"class" : ""
+				},
+				{
+					"title": 	"Bab 1 Kinerja dan Prospek Ekonomi Global: Pertumbuhan Melambat, Ketidakpastian Tinggi",
+					"link": 	report_2024_ID_bab1,
+					"desc"  : "Dinamika geopolitik dan perekonomian dunia mengalami perubahan yang cepat dengan tingkat ketidakpastian yang tinggi. Lima faktor risiko global perlu diwaspadai karena dapat memengaruhi prospek perekonomian dunia ke depan yaitu tingginya risiko geopolitik dan berlanjutnya fragmentasi pola perdagangan dunia, bergesernya pola pertumbuhan ekonomi spasial dunia, tingginya suku bunga dan risiko utang, berubahnya pola investasi keuangan dunia, serta cepatnya digitalisasi antarnegara dan meningkatnya risiko operasional (siber). Dinamika dan prospek perekonomian global ke depan tersebut berimplikasi besar pada perekonomian Indonesia dan karenanya perlu diantisipasi dengan respons bauran kebijakan ekonomi nasional yang optimal.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 2 Kinerja dan Prospek Ekonomi Nasional: Stabilitas Tetap Terjaga, Pertumbuhan Meningkat",
+					"link": 	report_2024_ID_bab2,
+					"desc"  : "Sinergi bauran kebijakan nasional mendukung berlanjutnya pemulihan ekonomi domestik, dengan ketahanan yang kuat dalam memitigasi dampak rambatan global dan kinerja yang diakui secara internasional. Pertumbuhan ekonomi Indonesia diprakirakan mencapai 4,7-5,5% pada 2024, dengan stabilitas makroekonomi yang tetap terjaga. Inflasi IHK tercatat menurun dan berada dalam kisaran sasaran 2,5&plusmn;1%, dengan penurunan di seluruh komponennya. Stabilitas sistem keuangan tetap terjaga, ditopang likuiditas yang memadai, permodalan perbankan yang kuat, serta risiko kredit yang rendah. Ke depan, prospek ekonomi Indonesia pada 2025 diprakirakan makin positif, dengan pertumbuhan sekitar 4,8-5,6%, didukung oleh perekonomian yang terus terjaga.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 3 Bauran Kebijakan Bank Indonesia 2024: Menjaga Stabilitas, Mendukung Pertumbuhan Berkelanjutan",
+					"link": 	report_2024_ID_bab3,
+          "desc"  : "Bank Indonesia menempuh bauran kebijakan untuk memperkuat stabilitas dan turut mendukung pertumbuhan yang berkelanjutan, bersinergi erat dengan bauran kebijakan ekonomi nasional. Kebijakan moneter lebih difokuskan pada menjaga stabilitas (<i>pro-stability</i>) sementara kebijakan makroprudensial dan sistem pembayaran tetap diarahkan untuk mendorong pertumbuhan ekonomi (<i>pro-growth</i>). Bauran kebijakan ini sebagai keseimbangan antara menjaga stabilitas dari dampak negatif rambatan global dengan menjaga momentum pemulihan siklus ekonomi dan keuangan nasional yang tengah meningkat. Bauran kebijakan utama didukung oleh penguatan kebijakan pendalaman pasar uang dan pasar valuta asing, program-program pengembangan UMKM dan ekonomi-keuangan syariah, serta kebijakan internasional.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 4 Sinergi Bauran Kebijakan Transformasi Ekonomi Nasional: Memperkuat Stabilitas, Mendorong Pertumbuhan Tinggi",
+					"link": 	report_2024_ID_bab4,
+					"desc"  : "Lima sinergi bauran kebijakan ekonomi nasional perlu ditempuh guna memperkuat ketahanan dan meningkatkan kinerja perekonomian nasional lebih tinggi. Pertama, penguatan sinergi bauran kebijakan makroekonomi dan sistem keuangan untuk menjaga stabilitas ekonomi. Kedua, sinergi bauran kebijakan ekonomi nasional untuk mendorong permintaan domestik, baik melalui konsumsi maupun investasi. Ketiga, sinergi kebijakan transformasi ekonomi nasional secara menyeluruh untuk mencapai pertumbuhan tinggi. Keempat, sinergi antara Pemerintah, KSSK, dan Bank Indonesia untuk mengoptimalkan berbagai sumber pembiayaan perekonomian. Kelima, penguatan sinergi kebijakan untuk mendorong akselerasi digitalisasi sektor ekonomi dan keuangan Indonesia.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 5 Arah Bauran Kebijakan Bank Indonesia Tahun 2025: Menjaga Stabilitas, Mendorong Pertumbuhan Berkelanjutan",
+					"link": 	report_2024_ID_bab5,
+					"desc"  : "Bauran kebijakan Bank Indonesia pada 2025 tetap diarahkan untuk menjaga stabilitas dan mendorong pertumbuhan ekonomi berkelanjutan. Kebijakan moneter diarahkan pada keseimbangan menjaga stabilitas dengan tetap mencermati ruang untuk mendukung pertumbuhan ekonomi (<i>pro-stability and growth</i>), sementara kebijakan makroprudensial, sistem pembayaran, pendalaman pasar uang, serta pengembangan ekonomi-keuangan inklusif dan hijau difokuskan pada mendukung pertumbuhan ekonomi (<i>pro-growth</i>). Bank Indonesia akan terus memperkuat sinergi dan koordinasi baik dengan Pemerintah dan Komite Stabilitas Sistem Keuangan (KSSK) maupun dengan industri keuangan, dunia usaha, dan asosiasi. Kebijakan transformasi kelembagaan juga akan terus ditempuh untuk membangun lembaga yang kredibel, profesional, transparan, dan bertata kelola baik.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 6 BPPU 2030: Strategi Akselerasi Pendalaman Pasar Uang dan Pasar Valuta Asing untuk Indonesia Maju",
+					"link": 	report_2024_ID_bab6,
+					"desc"  : "Pasar Uang dan Pasar Valuta Asing (PUVA) memiliki peran strategis dalam mendukung pertumbuhan ekonomi berkelanjutan, termasuk mempertimbangkan lingkungan strategis global dan domestik. Blueprint Pendalaman Pasar Uang dan Pasar Valuta Asing (BPPU) 2030 disusun untuk melanjutkan capaian dan momentum positif BPPU 2025 sekaligus sebagai pelaksanaan amanat UU P2SK serta untuk mengakselerasi arah pendalaman PUVA guna mewujudkan PUVA yang modern dan maju. Bank Indonesia menetapkan sasaran strategis BPPU 2030 pada aspek produk (<i>product</i>), harga (<i>pricing</i>), pelaku (<i>participant</i>), dan infrastruktur (<i>infrastructure</i>) atau disebut 3P+I.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Bab 7 BSPI 2030: Strategi Memperkuat Transformasi Digital Nasional",
+					"link": 	report_2024_ID_bab7,
+					"desc"  : "Transformasi digital nasional berkembang makin pesat didorong pergeseran preferensi masyarakat dalam bertransaksi ke platform digital dan peningkatan partisipasi generasi muda yang mengadopsi layanan digital secara masif. Bank Indonesia melalui Blueprint Sistem Pembayaran Indonesia (BSPI) 2025 telah meletakkan fondasi awal arah pengembangan sistem pembayaran nasional. Untuk memperkuat capaian BSPI 2025 dan transformasi digital nasional, Bank Indonesia pada 1 Agustus 2024 telah menerbitkan BSPI 2030 yang ditujukan untuk menciptakan ekosistem keuangan digital yang efisien, inklusif, dan terintegrasi, guna mendukung pencapaian visi Indonesia Emas 2045.",
+          "class" : 	"indent"
+				},
+				{
+					"title": 	"Lampiran",
+					"link": 	report_2024_ID_appendices,
+					"desc"  : "",
+					"class" : 	""
+				},
+				{
+					"title": 	"Laporan Perekonomian Indonesia 2024",
+					"link": 	report_2024_ID_full,
+					"desc"  : "",
+					"class" : 	"indent"
+				}
+      ],
+		},
+    "EN" : {
+			"cover" : "cover2024.jpg",
+			"title": 	"Coming Soon",
+      "prakata": "",
+      "prakataLink" : report_2024_EN_prakata,
+      "content": []
+      // "content": [
+      //   {
+			// 		"title": 	"Overview Synergy Strengthening National Economic Resilience and Revival",
+			// 		"link": 	report_2024_EN_overview,
+      //     "desc"  : "The Indonesian economy charted a steady recovery with prudently managed economic stability in 2023 amid slowing growth in the global economy and heightened uncertainty in financial markets. Policy mix responses by Bank Indonesia, in synergy with national economic policies, were key to the resilient performance of the Indonesian economy. Further steps will be taken to strengthen the Bank Indonesia policy mix in 2024 to preserve stability and drive sustainable economic growth. Bank Indonesia is confident that the policy mix and close policy synergy will strengthen national economic revival and generate further momentum in moving towards an Advanced Indonesia.",
+			// 		"class" : ""
+			// 	},
+			// 	{
+			// 		"title": 	"Chapter 1 Global Economic Performance and Prospects: Moderating Growth, Heightened Uncertainty",
+			// 		"link": 	report_2024_EN_bab1,
+			// 		"desc"  : "The rapidly changing dynamics of the world economy, accompanied by escalating geopolitical tensions, worsen the economic outlook and increase the uncertainty on global financial markets. This is characterized by five challenges, discussed below, that have generally dimmed the prospects for the world economy and increased investment; they also encourage trade divergences between developed and emerging countries and increase global financial market uncertainty. Such challenges demand the strengthening of international cooperation, both on a multilateral and regional scale, to mitigate the risks as early as possible; to minimize their spillover effects on economic resilience; and to bolster the global economic recovery.",
+      //     "class" : 	"indent"
+			// 	},
+			// 	{
+			// 		"title": 	"Chapter 2 National Economic Performance and Prospects: Stability Maintained, Recovery Intact",
+			// 		"link": 	report_2024_EN_bab2,
+			// 		"desc"  : "The synergy of prudent and consistent national economic policies can support the continued recovery of the national economy amidst global economic slowdown. Economic growth is projected to reach 4.5-5.3% in 2023 and is expected to increase into the range of 4.7-5.5% in 2024, supported by the maintenance of stability. Inflation is declining markedly and it is well-controlled within the target range. Banking resilience and financial system stability are maintained, supported by adequate liquidity, strong capitalization and low credit risk. Moving forward, the economic prospects for 2025 are projected to improve further, with growth of 4.8-5.6% with the continued maintenance of monetary and financial system stability.",
+      //     "class" : 	"indent"
+			// 	},
+			// 	{
+			// 		"title": 	"Chapter 3 Bank Indonesia Policy Mix 2023: Maintaining Stability, Supporting Sustainable Growth",
+			// 		"link": 	report_2024_EN_bab3,
+			// 		"desc"  : "The Bank Indonesia policy mix was oriented towards maintaining stability and supporting sustainable growth. In this regard, monetary policy was oriented towards maintaining stability (pro-stability), while four other policies (macroprudential policy, payment system policy, money market deepening policy and inclusive and green economy-finance policy) remained oriented towards accelerating economic growth (pro-growth). Bank Indonesia&#96;s policy mix, which also synergizes with national economic policies, is able to maintain economic stability and encourage the continuation of Indonesia&#96;s growth momentum amidst the global economic slowdown.",
+      //     "class" : 	"indent"
+			// 	},
+			// 	{
+			// 		"title": 	"Chapter 4 National Economic Policy Mix Synergy: Five Directions of the Policy Response",
+			// 		"link": 	report_2024_EN_bab4,
+			// 		"desc"  : "A synergetic policy response implemented in five directions is required to strengthen national economic resilience and revival. First, strengthening coordination between fiscal policy of the Government and monetary and macroprudential policies of Bank Indonesia to strike an optimal balance between macroeconomic stability and reviving economic growth. Second, strengthening policy coordination in the KSSK to maintain financial system stability and foster economic financing. Third, policy synergy to accelerate digitalization and increase economic and financial inclusion. Fourth, policy synergy to expand downstreaming of the mineral and mining sector to agriculture, plantation and fishing sectors to increase the value added of exports and to develop domestic industry in addition to strengthening food security and controlling inflation. Fifth, policy to expand trade and investment with trading partner countries characterised by promising growth prospects.",
+      //     "class" : 	"indent"
+			// 	},
+			// 	{
+			// 		"title": 	"Chapter 5 Bank Indonesia Policy Mix Direction in 2024: Maintaining Stability, Reviving Sustainable Growth",
+			// 		"link": 	report_2024_EN_bab5,
+			// 		"desc"  : "Bank Indonesia&#96;s policy mix in 2024 will remain oriented towards maintaining stability and reviving sustainable economic growth. Bank Indonesia&#96;s monetary policy is focused on maintaining stability (pro-stability), while macroprudential policies, payment systems, deepening money markets and inclusive and green economic finance will continue to be aimed at promoting sustainable economic growth (pro-growth). Bank Indonesia will also continue to strengthen synergy and coordination with government policies and the Financial System Stability Committee (KSSK), as well as with the financial industry, business community and associations.",
+      //     "class" : 	"indent"
+			// 	},
+			// 	{
+			// 		"title": 	"Chapter 6 Indonesia&#96;s Asean Chairmanship in 2023, Asean Matters: Epicentrum of Growth",
+			// 		"link": 	report_2024_EN_bab6,
+			// 		"desc"  : "Following the success of Indonesia&#96;s G20 Presidency in 2022, Indonesia was handed the baton of Chair of ASEAN for 2023 by Cambodia and launched the theme of ASEAN Matters: Epicentrum of Growth. Bank Indonesia worked in close synergy with the Government in supporting Indonesia&#96;s Chairmanship of ASEAN in 2023. In this, the strategic role of Bank Indonesia involved five deliverables, as discussed below. In a successful Chairmanship in 2023, Indonesia established key agendas for economic and financial strengthening of the region in the face of global uncertainties and promoted synergy for transformation into an epicentrum of global growth.",
+      //     "class" : 	"indent"
+			// 	},
+			// 	{
+			// 		"title": 	"Chapter 7 Strengthening Downstream Policy for Economic Revival",
+			// 		"link": 	report_2024_EN_bab7,
+			// 		"desc"  : "Downstream policy is a strategic step to increase added value and productivity while supporting economic stability. Downstream policies to support economic stability and increase added value and productivity can be pursued through the downstreaming of both food and minerals and coal. In the future, policy synergies need to be strengthened further in order to hasten downstreaming in support of Indonesia&#96;s transformation towards a developed country, including through improving factors of production, strengthening regulatory and institutional aspects, while encouraging trade cooperation and promotion.",
+      //     "class" : 	"indent"
+			// 	},
+			// 	{
+			// 		"title": 	"Appendices",
+			// 		"link": 	report_2024_EN_appendices,
+			// 		"desc": 	"",
+			// 		"class" : 	""
+			// 	},
+			// 	{
+			// 		"title": 	"Indonesia Economic Report 2024",
+			// 		"link": 	report_2024_EN_full,
+			// 		"desc": 	"",
+			// 		"class" : 	"indent"
+			// 	}
+      // ]
+		}
   }
 }
 
-var listLPI = ["2023", "2022", "2021", "2020","2019","2018","2017","2016","2015"];
+var listLPI = ["2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015"];
 
 var GLOBAL_MESSAGE = {
   "ID" : {

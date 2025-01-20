@@ -49,7 +49,7 @@ var app = {
             LANG = window.localStorage.getItem("LANG_ID");
             console.log(LANG);
         } else {
-            window.localStorage.setItem("LANG_ID",LANG);
+            window.localStorage.setItem("LANG_ID", LANG);
         }
         setTimeout(function(){
             $.mobile.changePage("mainPage.html");
@@ -323,6 +323,10 @@ $(document).ready(function (event) {
           $("#dewanGubernur").show();
           $("#readPrakata").attr("data-url",pdfYear.prakataLink);
           $("#readPrakata").attr("data-chapter","Prakata");
+          // TODO: remove for EN 2024 release
+          if (selectedYear === "2024" && LANG === "EN") {
+            $("#prakataSection").hide();
+          }
         } else {
           $("#prakataDwn").hide();
           $("#dewanGubernur").hide();
@@ -1319,6 +1323,10 @@ function generateHome(){
         if (parseInt(selectedYear) >= 2021) {
           $("#prakataDwn").show();
           $("#dewanGubernur").show();
+           // TODO: remove for EN 2024 release
+          if (selectedYear === "2024" && LANG === "EN") {
+            $("#prakataSection").hide();
+          }
         } else {
           $("#prakataDwn").hide();
           $("#dewanGubernur").hide();
