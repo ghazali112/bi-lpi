@@ -256,135 +256,85 @@ $(document).ready(function (event) {
         });
     });
     
-    $(document).on("pageinit","#homePage",function(e){
-        var dWidth = $(document).width();
-        var dHeight = $(document).height();
+    $(document).on("pageinit", "#homePage", function () {
+        const dWidth = $(document).width();
+        const dHeight = $(document).height();
         
-        //var sdBarH = $(window).height();
-        console.log(selectedYear);
-        console.log(LANG);
-        console.log(GLOBAL_MESSAGE);
-        //$("#homePage #overlayConent").css("height",sdBarH-160 + "px");
+        console.log(selectedYear, LANG, GLOBAL_MESSAGE);
         
-        $("#tagLine").html("LPI " + selectedYear);
-        $("#redBarTitle").html(GLOBAL_MESSAGE[LANG].SIDE_TITLE +" "+ selectedYear );
-        $("#prakata").html(GLOBAL_MESSAGE[LANG].PRAKATA);
-        $("#readPrakata").html(GLOBAL_MESSAGE[LANG].READ_MORE_BTN);
-        $("#dewanGub").html(GLOBAL_MESSAGE[LANG].DEWAN_GUB);
-        $("#mainGubImgSrc").attr("src",GLOBAL_MESSAGE[LANG].MAIN_GUB_IMG);
-        $("#dewangubImg").attr("src",GLOBAL_MESSAGE[LANG].DEWAN_GUB_IMG);
-
-        if(selectedUrl !=""){
-            $(".pdfTitle").html("LPI " + selectedYear);
-            $("#pdfImage").attr("src",selectedUrl);
+        $("#tagLine").text(`LPI ${selectedYear}`);
+        $("#redBarTitle").text(`${GLOBAL_MESSAGE[LANG].SIDE_TITLE} ${selectedYear}`);
+        $("#prakata").text(GLOBAL_MESSAGE[LANG].PRAKATA);
+        $("#readPrakata").text(GLOBAL_MESSAGE[LANG].READ_MORE_BTN);
+        $("#dewanGub").text(GLOBAL_MESSAGE[LANG].DEWAN_GUB);
+        $("#mainGubImgSrc").attr("src", GLOBAL_MESSAGE[LANG].MAIN_GUB_IMG);
+        $("#dewangubImg").attr("src", GLOBAL_MESSAGE[LANG].DEWAN_GUB_IMG);
+        
+        if (selectedUrl) {
+            $(".pdfTitle").text(`LPI ${selectedYear}`);
+            $("#pdfImage").attr("src", selectedUrl);
             $("#pdfContainer").addClass("on");
-            selectedUrl="";
-
-            setTimeout(function(){ 
-                if(highlightRender == "Y") {
-                    var iframe = document.getElementById('pdfImage');
-                    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-                    
-                    innerDoc.getElementById("viewFind").click();
-                    innerDoc.getElementById("findInput").value = highlightText;
-                    innerDoc.getElementById("findHighlightAll").click();
-                    
-                    highlightRender="";
-                    highlightText="";
+            selectedUrl = "";
+    
+            setTimeout(() => {
+                if (highlightRender === "Y") {
+                    const iframe = document.getElementById('pdfImage').contentDocument || document.getElementById('pdfImage').contentWindow.document;
+                    iframe.getElementById("viewFind").click();
+                    iframe.getElementById("findInput").value = highlightText;
+                    iframe.getElementById("findHighlightAll").click();
+                    highlightRender = "";
+                    highlightText = "";
                 }
             }, 800);
         }
-        var pdfObj = "";
-        var pdfYear = "";
         
-        // if(selectedYear == "2018") {
-        //     pdfYear = pdfLink[selectedYear][LANG]; 
-        //     pdfObj = pdfLink[selectedYear][LANG].content;
-        // } else {
-        //     pdfYear = pdfLink[selectedYear]; 
-        //     pdfObj = pdfLink[selectedYear].content;
-        // }
-
-        pdfYear = pdfLink[selectedYear][LANG]; 
-        pdfObj = pdfLink[selectedYear][LANG].content;
-
-        console.log(pdfObj);
-        var restHtml="";
-        console.log($("#laporanTitle"));
-
-        $("#laporanTitle").html(pdfYear.title);
+        const pdfYear = pdfLink[selectedYear][LANG];
+        const pdfObj = pdfYear.content;
+        console.log(pdfObj, $("#laporanTitle"));
         
-        $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+LANG+"_primary.jpg")
-        $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg")
-        $("#laporanTitle").html(pdfYear.title);
-
+        $("#laporanTitle").text(pdfYear.title);
+        $("#mainGubImgSrc").attr("src", `img/governors/mainGub_${LANG}_primary.jpg`);
+        $("#dewangubImg").attr("src", `img/governors/dewanGub_${selectedYear}_${LANG}.jpg`);
+        
         if (parseInt(selectedYear) >= 2021) {
-          $("#prakataDwn").show();
-          $("#dewanGubernur").show();
-          $("#readPrakata").attr("data-url",pdfYear.prakataLink);
-          $("#readPrakata").attr("data-chapter","Prakata");
-          // TODO: remove for EN 2024 release
-          if (selectedYear === "2024" && LANG === "EN") {
-            $("#prakataSection").hide();
-          }
+            $("#prakataDwn, #dewanGubernur").show();
+            $("#readPrakata").attr({ "data-url": pdfYear.prakataLink, "data-chapter": "Prakata" });
+            if (selectedYear === "2024" && LANG === "EN") $("#prakataSection").hide();
         } else {
-          $("#prakataDwn").hide();
-          $("#dewanGubernur").hide();
+            $("#prakataDwn, #dewanGubernur").hide();
         }
-
-        // if (selectedYear == "2018" || selectedYear == "2021" || selectedYear == "2022") {
-        /* if (selectedYear.includes("2018", "2021", "2022", "2023")) {
-            $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+selectedYear+"_"+LANG+".jpg");
-            $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg");
-            $("#prakataDwn").show();
-            $("#dewanGubernur").show();
-            $("#readPrakata").attr("data-url",pdfYear.prakataLink);
-            $("#readPrakata").attr("data-chapter","Prakata");
-        } else if (selectedYear == "2019" || selectedYear == "2020") {
-            $("#mainGubImgSrc").attr("src","img/governors/mainGub_"+LANG+".jpg");
-            $("#dewangubImg").attr("src","img/governors/dewanGub_"+selectedYear+"_"+LANG+".jpg");
-            $("#prakataDwn").show();
-            $("#dewanGubernur").show();
-            $("#readPrakata").attr("data-url",pdfYear.prakataLink);
-            $("#readPrakata").attr("data-chapter","Prakata");
-        } else {
-            $("#prakataDwn").hide();
-            $("#dewanGubernur").hide();
-        } */
-
+        
         $("#prakataId").html(pdfYear.prakata);
-
-        var vREAD_MORE_BTN_2020 = GLOBAL_MESSAGE[LANG].READ_MORE_BTN;
-
-        $("#mainImage").html('<img src="img/'+pdfYear.cover+'" />');
-        for(var i=0;i<pdfObj.length;i++) {
-            restHtml +='<div class="card">'+
-                        '    <div class="card-header" id="headingOne">'+
-                        '        <div class="collapseTitle" data-toggle="collapse" data-target="#collapse'+i+'" aria-expanded="true" aria-controls="collapseOne">'+
-                                pdfObj[i].title+
-                        '            <span class="collapseArrow"><img src="img/leftArrow.png" class="collapseArrowImg"/></span>'+
-                        '        </div>'+
-                        '    </div>'+
-                        ' '+
-                        '    <div id="collapse'+i+'" class="collapse" aria-labelledby="headingOne" data-parent="#mainContent">'+
-                        '    <div class="card-body">'+
-                                pdfObj[i].desc+
-                        '        <div id="readPdf" data-url="'+pdfObj[i].link+'" data-chapter="'+pdfObj[i].title+'"  class="readMoreBtn smallBtn">'+vREAD_MORE_BTN_2020+'</div>'+
-                        '    </div>'+
-                        '    </div>'+
-                        '</div>';
-        }
+        
+        $("#mainImage").html(`<img src="img/${pdfYear.cover}" />`);
+        
+        let restHtml = pdfObj.map((item, i) => `
+            <div class="card">
+                <div class="card-header" id="heading${i}">
+                    <div class="collapseTitle" data-toggle="collapse" data-target="#collapse${i}" aria-expanded="true" aria-controls="collapse${i}">
+                        ${item.title} <span class="collapseArrow"><img src="img/leftArrow.png" class="collapseArrowImg"/></span>
+                    </div>
+                </div>
+                <div id="collapse${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#mainContent">
+                    <div class="card-body">
+                        ${item.desc}
+                        <div id="readPdf" data-url="${item.link}" data-chapter="${item.title}" class="readMoreBtn smallBtn">
+                            ${GLOBAL_MESSAGE[LANG].READ_MORE_BTN}
+                        </div>
+                    </div>
+                </div>
+            </div>`).join('');
         
         console.log(triggerCreate);
-        if(triggerCreate){
-            
-            triggerCreate=false;
+        if (triggerCreate) {
+            triggerCreate = false;
             generateHome();
         }
+        
         generateSideBar("homePage");
-
         $("#mainContent").html(restHtml);
     });
+    
 
     $(document).on("pageinit","#bookmarkPage",function(e){
         var dHeight = $(window).height();
