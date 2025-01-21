@@ -41,6 +41,7 @@
     "cordova-ios": "^5.1.1",
     "cordova-plugin-file-transfer": "github:apache/cordova-plugin-file-transfer",
     "cordova-plugin-wkwebview-engine": "^1.2.1",
-    "cordova-plugin-wkwebviewxhrfix": "git+https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix.git"
+    "cordova-plugin-wkwebviewxhrfix": "git+https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix.git",
+    "pdfjs": "^2.5.3"
   }
 }
